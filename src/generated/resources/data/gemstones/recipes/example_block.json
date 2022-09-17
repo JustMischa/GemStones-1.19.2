@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "E": {
+      "item": "gemstones:another_example_block"
+    }
+  },
+  "pattern": [
+    "E",
+    "E",
+    "E"
+  ],
+  "result": {
+    "item": "gemstones:example_block"
+  }
+}

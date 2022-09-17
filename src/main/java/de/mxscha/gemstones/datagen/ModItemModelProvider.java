@@ -18,7 +18,14 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        // simpleItem(ModItems.EXAMPLE_ITEM.get());
+        /*
+        simpleItem(ModItems.SAPPHIRE_GEM.get());
+        simpleItem(ModItems.RUBY_GEM.get());
+        simpleItem(ModItems.CITRINE_GEM.get());
+        simpleItem(ModItems.AMETHYST_GEM.get());
+        simpleItem(ModItems.DIOPSIDE_GEM.get());
+        simpleItem(ModItems.JADE_GEM.get());
+         */
     }
 
     private ItemModelBuilder simpleItem(Item item) {

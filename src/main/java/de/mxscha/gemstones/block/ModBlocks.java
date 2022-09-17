@@ -23,6 +23,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> EXAMPLE_BLOCK = registerBlock("example_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ACACIA_PLANKS)), ModItemCreativeTab.BLOCK_GEMSTONES);
     public static final RegistryObject<Block> ANOTHER_EXAMPLE_BLOCK = registerBlock("another_example_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ACACIA_PLANKS)), ModItemCreativeTab.BLOCK_GEMSTONES);
 
+
+
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);
     }
