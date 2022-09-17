@@ -16,5 +16,4 @@ public class ModBlockStatesProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         simpleBlock(ModBlocks.EXAMPLE_BLOCK.get());
         simpleBlock(ModBlocks.ANOTHER_EXAMPLE_BLOCK.get());
-    }
-}
+    }}
