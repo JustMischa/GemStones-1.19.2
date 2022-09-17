@@ -14,6 +14,11 @@ public class ModBlockStatesProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        simpleBlock(ModBlocks.EXAMPLE_BLOCK.get());
-        simpleBlock(ModBlocks.ANOTHER_EXAMPLE_BLOCK.get());
-    }}
+        simpleBlock(ModBlocks.SAPPHIRE_ORE.get());
+        simpleBlock(ModBlocks.RUBY_ORE.get());
+        simpleBlock(ModBlocks.CITRINE_ORE.get());
+        simpleBlock(ModBlocks.AMETHYST_ORE.get());
+        simpleBlock(ModBlocks.DIOPSIDE_ORE.get());
+        simpleBlock(ModBlocks.JADE_ORE.get());
+    }
+}

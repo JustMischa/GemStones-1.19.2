@@ -1,6 +1,7 @@
 package de.mxscha.gemstones.datagen;
 
 import de.mxscha.gemstones.block.ModBlocks;
+import de.mxscha.gemstones.item.ModItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -19,7 +20,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> finishedRecipeConsumer) {
         // example Crafting
-        ShapedRecipeBuilder.shaped(ModBlocks.EXAMPLE_BLOCK.get()).define('E', ModBlocks.ANOTHER_EXAMPLE_BLOCK.get()).pattern("E").pattern("E").pattern("E").
-         unlockedBy("has_another_example_block", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.ANOTHER_EXAMPLE_BLOCK.get()).build())).save(finishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.SAPPHIRE_ORE.get()).define('E', ModItems.SAPPHIRE_GEM.get()).pattern("EEE").pattern("EEE").pattern("EEE").
+         unlockedBy("has_another_sapphire_gem", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.SAPPHIRE_GEM.get()).build())).save(finishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.RUBY_ORE.get()).define('E', ModItems.RUBY_GEM.get()).pattern("EEE").pattern("EEE").pattern("EEE").
+                unlockedBy("has_another_ruby_gem", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.RUBY_GEM.get()).build())).save(finishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.CITRINE_ORE.get()).define('E', ModItems.CITRINE_GEM.get()).pattern("EEE").pattern("EEE").pattern("EEE").
+                unlockedBy("has_another_citrine_gem", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.CITRINE_GEM.get()).build())).save(finishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.AMETHYST_ORE.get()).define('E', ModItems.AMETHYST_GEM.get()).pattern("EEE").pattern("EEE").pattern("EEE").
+                unlockedBy("has_another_amethyst_gem", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.AMETHYST_GEM.get()).build())).save(finishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.DIOPSIDE_ORE.get()).define('E', ModItems.DIOPSIDE_GEM.get()).pattern("EEE").pattern("EEE").pattern("EEE").
+                unlockedBy("has_another_diopside_gem", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.DIOPSIDE_GEM.get()).build())).save(finishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(ModBlocks.JADE_ORE.get()).define('E', ModItems.JADE_GEM.get()).pattern("EEE").pattern("EEE").pattern("EEE").
+                unlockedBy("has_another_jade_gem", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.JADE_GEM.get()).build())).save(finishedRecipeConsumer);
     }
 }

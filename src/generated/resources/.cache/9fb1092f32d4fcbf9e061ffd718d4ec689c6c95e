@@ -1,3 +1,13 @@
-// 1.19.2	2022-09-17T10:49:51.3268642	Recipes
-587cfb40667a8f019846bc174809e020bb517234 data/gemstones/advancements/recipes/block_gemstones/example_block.json
-07458cfd6944d61fecdb8c5b81ce9e5de657f0a9 data/gemstones/recipes/example_block.json
+// 1.19.2	2022-09-17T23:17:38.6787337	Recipes
+bdc34009d7faf32c66bd72a2872303f98ae21c7b data/gemstones/advancements/recipes/block_gemstones/amethyst_ore.json
+7d6f30bc372b4f30724e0169079c53c063bb5fc7 data/gemstones/advancements/recipes/block_gemstones/citrine_ore.json
+9769d23b9f37678ac434a7674dc4cbc0ef9cd090 data/gemstones/advancements/recipes/block_gemstones/diopside_ore.json
+4be92949d7c7a9b6dda3fb22d82864fbaadc649f data/gemstones/advancements/recipes/block_gemstones/jade_ore.json
+4733d280ae9b98dcc2764df1300a564692345d7f data/gemstones/advancements/recipes/block_gemstones/ruby_ore.json
+d1a4dd334b48fc6fca6886fd516486c4e996defb data/gemstones/advancements/recipes/block_gemstones/sapphire_ore.json
+9db8f3c3511592283aeef42acd5ba8db7cc459ea data/gemstones/recipes/amethyst_ore.json
+23535cfe34c7920a7e3b1376624594105e5c1b6b data/gemstones/recipes/citrine_ore.json
+41cdef1c883cc9e06936e65473d77117371f12e2 data/gemstones/recipes/diopside_ore.json
+62772d3536fa03b009c638c0ebfe3c167b2e1daa data/gemstones/recipes/jade_ore.json
+3b41f9412dd7f3f1620a69124c0b02895406e191 data/gemstones/recipes/ruby_ore.json
+599508381401db38a63fe94d5b1aa151fb56024a data/gemstones/recipes/sapphire_ore.json

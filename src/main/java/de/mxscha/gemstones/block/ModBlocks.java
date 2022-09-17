@@ -20,10 +20,12 @@ public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, GemStones.MOD_ID);
 
-    public static final RegistryObject<Block> EXAMPLE_BLOCK = registerBlock("example_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ACACIA_PLANKS)), ModItemCreativeTab.BLOCK_GEMSTONES);
-    public static final RegistryObject<Block> ANOTHER_EXAMPLE_BLOCK = registerBlock("another_example_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.ACACIA_PLANKS)), ModItemCreativeTab.BLOCK_GEMSTONES);
-
-
+    public static final RegistryObject<Block> SAPPHIRE_ORE = registerBlock("sapphire_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> RUBY_ORE = registerBlock("ruby_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> CITRINE_ORE = registerBlock("citrine_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> AMETHYST_ORE = registerBlock("amethyst_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> DIOPSIDE_ORE = registerBlock("diopside_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> JADE_ORE = registerBlock("jade_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)), ModItemCreativeTab.BLOCK_GEMSTONES);
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);

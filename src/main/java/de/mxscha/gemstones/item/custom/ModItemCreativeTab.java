@@ -11,14 +11,14 @@ public class ModItemCreativeTab {
     public static final CreativeModeTab ITEM_GEMSTONES = new CreativeModeTab("item_gemstones") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(Items.DIAMOND);
+            return new ItemStack(ModItems.JADE_GEM.get());
         }
     };
 
     public static final CreativeModeTab BLOCK_GEMSTONES = new CreativeModeTab("block_gemstones") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(Items.COMMAND_BLOCK);
+            return new ItemStack(ModBlocks.CITRINE_ORE.get());
         }
     };
 }

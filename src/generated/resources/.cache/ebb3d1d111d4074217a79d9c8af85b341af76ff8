@@ -1,5 +1,13 @@
-// 1.19.2	2022-09-17T11:16:41.1328217	Block States: gemstones
-16a47a53d5a7909d92408b992cc7d480fc489e4f assets/gemstones/blockstates/another_example_block.json
-55920d736441746b121f35a4cf2fffc3374cf4a8 assets/gemstones/blockstates/example_block.json
-56296e4b01edbcd2c026b8500381358e6381938e assets/gemstones/models/block/another_example_block.json
-0c63a16f4c62cf88017a83d469b1f6ae60738c1e assets/gemstones/models/block/example_block.json
+// 1.19.2	2022-09-17T23:17:38.6777338	Block States: gemstones
+4b4422651b27298a5780992988cdea3b1d60682a assets/gemstones/blockstates/amethyst_ore.json
+0779b3ffb0efc60186a93d158c8347a23fdf54c9 assets/gemstones/blockstates/citrine_ore.json
+4f6493db7f2e703735adb4626873ff8634b98890 assets/gemstones/blockstates/diopside_ore.json
+c11136c881fb33f960b56191bb185e159929683a assets/gemstones/blockstates/jade_ore.json
+59abd5c9c42222754d7de8e250baf131e84f4f03 assets/gemstones/blockstates/ruby_ore.json
+395ae29743d9493abd389ff1db54dfc3ddeb9c6b assets/gemstones/blockstates/sapphire_ore.json
+a71e647ae81eafd025205615d26727c9df2d0522 assets/gemstones/models/block/amethyst_ore.json
+dd031d372873deb62de1c80d0922978bc7c95e1e assets/gemstones/models/block/citrine_ore.json
+110ceb088a693fc526409c6ed55cb5eb7f148200 assets/gemstones/models/block/diopside_ore.json
+6af6c76836d681d03b7a5dd55f544ff55c790e9c assets/gemstones/models/block/jade_ore.json
+2b8af7a19cacc6b8f10e63b2ab11638ad9357181 assets/gemstones/models/block/ruby_ore.json
+fc9e1f82a5fbe19e00aa42e56a4648f465ecb601 assets/gemstones/models/block/sapphire_ore.json

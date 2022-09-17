@@ -1,6 +1,16 @@
 {
-  "block.gemstones.example_block": "Example Block",
-  "block.gemstones.another_example_block": "Another Example Block",
+  "item.gemstones.sapphire_gem": "Sapphire Gem",
+  "item.gemstones.ruby_gem": "Ruby Gem",
+  "item.gemstones.citrine_gem": "Citrine Gem",
+  "item.gemstones.amethyst_gem": "Amethyst Gem",
+  "item.gemstones.diopside_gem": "Diopside Gem",
+  "item.gemstones.jade_gem": "Jade Gem",
+  "block.gemstones.sapphire_ore": "Sapphire Ore",
+  "block.gemstones.ruby_ore": "Ruby Ore",
+  "block.gemstones_citrine_ore": "Citrine Ore",
+  "block.gemstones.amethyst_ore": "Amethyst Ore",
+  "block.gemstones.diopside_ore": "Diopside Ore",
+  "block.gemstones.jade_ore": "Jade Ore",
   "itemGroup.block_gemstones": "GemStones Blocks",
   "itemGroup.item_gemstones": "GemStones Items"
 }
