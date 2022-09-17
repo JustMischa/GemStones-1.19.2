@@ -1,0 +1,6 @@
+{
+  "block.gemstones.example_block": "Example Block",
+  "block.gemstones.another_example_block": "Another Example Block",
+  "itemGroup.block_gemstones": "GemStones Blocks",
+  "itemGroup.item_gemstones": "GemStones Items"
+}
