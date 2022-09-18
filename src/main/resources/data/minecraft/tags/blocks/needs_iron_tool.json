@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "gemstones:sapphire_ore",
+    "gemstones:ruby_ore",
+    "gemstones:citrine_ore",
+    "gemstones:amethyst_ore",
+    "gemstones:diopside_ore",
+    "gemstones:jade_ore",
+    "gemstones:caerula_ore",
+    "gemstones:energetic_ore",
+    "gemstones:tin_ore",
+    "gemstones:ender_ore",
+    "gemstones:sapphire_block",
+    "gemstones:ruby_block",
+    "gemstones:citrine_block",
+    "gemstones:amethyst_block",
+    "gemstones:diopside_block",
+    "gemstones:jade_block",
+    "gemstones:caerula_block",
+    "gemstones:energetic_block",
+    "gemstones:tin_block",
+    "gemstones:ender_block"
+  ]
+}
