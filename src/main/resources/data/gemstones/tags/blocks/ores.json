@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "gemstones:sapphire_ore",
+    "gemstones:ruby_ore",
+    "gemstones:citrine_ore",
+    "gemstones:amethyst_ore",
+    "gemstones:diopside_ore",
+    "gemstones:jade_ore",
+    "gemstones:caerula_ore",
+    "gemstones:energetic_ore",
+    "gemstones:tin_ore",
+    "gemstones:ender_ore"
+  ]
+}

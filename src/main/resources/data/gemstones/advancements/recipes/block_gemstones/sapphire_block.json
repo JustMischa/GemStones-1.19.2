@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_another_ruby_gem": {
+    "has_another_sapphire_gem": {
       "conditions": {
         "items": [
           {
             "items": [
-              "gemstones:ruby_gem"
+              "gemstones:sapphire_gem"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemstones:ruby_ore"
+        "recipe": "gemstones:sapphire_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_another_ruby_gem",
+      "has_another_sapphire_gem",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "gemstones:ruby_ore"
+      "gemstones:sapphire_block"
     ]
   }
 }

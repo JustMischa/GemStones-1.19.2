@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemstones:diopside_ore"
+        "recipe": "gemstones:diopside_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "gemstones:diopside_ore"
+      "gemstones:diopside_block"
     ]
   }
 }

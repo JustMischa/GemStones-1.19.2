@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_another_sapphire_gem": {
+    "has_another_citrine_gem": {
       "conditions": {
         "items": [
           {
             "items": [
-              "gemstones:sapphire_gem"
+              "gemstones:citrine_gem"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemstones:sapphire_ore"
+        "recipe": "gemstones:citrine_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_another_sapphire_gem",
+      "has_another_citrine_gem",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "gemstones:sapphire_ore"
+      "gemstones:citrine_block"
     ]
   }
 }

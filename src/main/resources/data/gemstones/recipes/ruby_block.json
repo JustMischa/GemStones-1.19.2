@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "E": {
-      "item": "gemstones:diopside_gem"
+      "item": "gemstones:ruby_gem"
     }
   },
   "pattern": [
@@ -11,6 +11,6 @@
     "EEE"
   ],
   "result": {
-    "item": "gemstones:diopside_ore"
+    "item": "gemstones:ruby_block"
   }
 }

@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_another_jade_gem": {
+    "has_another_amethyst_gem": {
       "conditions": {
         "items": [
           {
             "items": [
-              "gemstones:jade_gem"
+              "gemstones:amethyst_gem"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gemstones:jade_ore"
+        "recipe": "gemstones:amethyst_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_another_jade_gem",
+      "has_another_amethyst_gem",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "gemstones:jade_ore"
+      "gemstones:amethyst_block"
     ]
   }
 }

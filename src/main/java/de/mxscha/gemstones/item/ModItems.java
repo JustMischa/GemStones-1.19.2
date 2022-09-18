@@ -19,7 +19,7 @@ public class ModItems {
     public static final RegistryObject<Item> DIOPSIDE_GEM = ITEMS.register("diopside_gem", () -> new Item(new Item.Properties().tab(ModItemCreativeTab.ITEM_GEMSTONES)));
     public static final RegistryObject<Item> JADE_GEM = ITEMS.register("jade_gem", () -> new Item(new Item.Properties().tab(ModItemCreativeTab.ITEM_GEMSTONES)));
     public static final RegistryObject<Item> CAERULA_INGOT = ITEMS.register("caerula_ingot", () -> new Item(new Item.Properties().tab(ModItemCreativeTab.ITEM_GEMSTONES)));
-    public static final RegistryObject<Item> ENERGETIC = ITEMS.register("energetic_ingot", () -> new Item(new Item.Properties().tab(ModItemCreativeTab.ITEM_GEMSTONES)));
+    public static final RegistryObject<Item> ENERGETIC_INGOT = ITEMS.register("energetic_ingot", () -> new Item(new Item.Properties().tab(ModItemCreativeTab.ITEM_GEMSTONES)));
     public static final RegistryObject<Item> TIN_INGOT = ITEMS.register("tin_ingot", () -> new Item(new Item.Properties().tab(ModItemCreativeTab.ITEM_GEMSTONES)));
     public static final RegistryObject<Item> ENDER_INGOT = ITEMS.register("ender_ingot", () -> new Item(new Item.Properties().tab(ModItemCreativeTab.ITEM_GEMSTONES)));
 

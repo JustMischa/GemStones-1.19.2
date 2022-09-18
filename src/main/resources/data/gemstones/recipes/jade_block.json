@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "E": {
-      "item": "gemstones:amethyst_gem"
+      "item": "gemstones:jade_gem"
     }
   },
   "pattern": [
@@ -11,6 +11,6 @@
     "EEE"
   ],
   "result": {
-    "item": "gemstones:amethyst_ore"
+    "item": "gemstones:jade_block"
   }
 }

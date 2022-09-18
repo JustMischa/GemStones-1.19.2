@@ -26,6 +26,20 @@ public class ModBlocks {
     public static final RegistryObject<Block> AMETHYST_ORE = registerBlock("amethyst_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)), ModItemCreativeTab.BLOCK_GEMSTONES);
     public static final RegistryObject<Block> DIOPSIDE_ORE = registerBlock("diopside_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)), ModItemCreativeTab.BLOCK_GEMSTONES);
     public static final RegistryObject<Block> JADE_ORE = registerBlock("jade_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> CAERULA_ORE = registerBlock("caerula_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> ENERGETIC_ORE = registerBlock("energetic_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> TIN_ORE = registerBlock("tin_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> ENDER_ORE = registerBlock("ender_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> SAPPHIRE_BLOCK = registerBlock("sapphire_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> RUBY_BLOCK = registerBlock("ruby_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> CITRINE_BLOCK = registerBlock("citrine_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> AMETHYST_BLOCK = registerBlock("amethyst_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> DIOPSIDE_BLOCK = registerBlock("diopside_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> JADE_BLOCK = registerBlock("jade_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> CAERULA_BLOCK = registerBlock("caerula_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> ENERGETIC_BLOCK = registerBlock("energetic_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> TIN_BLOCK = registerBlock("tin_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> ENDER_BLOCK = registerBlock("ender_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), ModItemCreativeTab.BLOCK_GEMSTONES);
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);
