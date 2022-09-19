@@ -10,6 +10,16 @@
     "gemstones:caerula_ore",
     "gemstones:energetic_ore",
     "gemstones:tin_ore",
-    "gemstones:ender_ore"
+    "gemstones:ender_ore",
+    "gemstones:sapphire_block",
+    "gemstones:ruby_block",
+    "gemstones:citrine_block",
+    "gemstones:amethyst_block",
+    "gemstones:diopside_block",
+    "gemstones:jade_block",
+    "gemstones:caerula_block",
+    "gemstones:energetic_block",
+    "gemstones:tin_block",
+    "gemstones:ender_block"
   ]
 }
