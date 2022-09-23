@@ -19,10 +19,10 @@ public class ModBlockLootTables extends BlockLoot {
         this.add(ModBlocks.AMETHYST_ORE.get(), (block) -> createOreDrop(ModBlocks.AMETHYST_ORE.get(), ModItems.AMETHYST_GEM.get()));
         this.add(ModBlocks.DIOPSIDE_ORE.get(), (block) -> createOreDrop(ModBlocks.DIOPSIDE_ORE.get(), ModItems.DIOPSIDE_GEM.get()));
         this.add(ModBlocks.JADE_ORE.get(), (block) -> createOreDrop(ModBlocks.JADE_ORE.get(), ModItems.JADE_GEM.get()));
-        this.add(ModBlocks.CAERULA_ORE.get(), (block) -> createOreDrop(ModBlocks.CAERULA_ORE.get(), ModItems.CAERULA_INGOT.get()));
-        this.add(ModBlocks.ENERGETIC_ORE.get(), (block) -> createOreDrop(ModBlocks.ENERGETIC_ORE.get(), ModItems.ENERGETIC_INGOT.get()));
-        this.add(ModBlocks.TIN_ORE.get(), (block) -> createOreDrop(ModBlocks.TIN_ORE.get(), ModItems.TIN_INGOT.get()));
-        this.add(ModBlocks.ENDER_ORE.get(), (block) -> createOreDrop(ModBlocks.ENDER_ORE.get(), ModItems.ENDER_INGOT.get()));
+        this.add(ModBlocks.CAERULA_ORE.get(), (block) -> createOreDrop(ModBlocks.CAERULA_ORE.get(), ModItems.RAW_CAERULA.get()));
+        this.add(ModBlocks.ENERGETIC_ORE.get(), (block) -> createOreDrop(ModBlocks.ENERGETIC_ORE.get(), ModItems.RAW_ENERGETIC.get()));
+        this.add(ModBlocks.TIN_ORE.get(), (block) -> createOreDrop(ModBlocks.TIN_ORE.get(), ModItems.RAW_TIN.get()));
+        this.add(ModBlocks.ENDER_ORE.get(), (block) -> createOreDrop(ModBlocks.ENDER_ORE.get(), ModItems.RAW_ENDER.get()));
         this.dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
         this.dropSelf(ModBlocks.RUBY_BLOCK.get());
         this.dropSelf(ModBlocks.CITRINE_BLOCK.get());

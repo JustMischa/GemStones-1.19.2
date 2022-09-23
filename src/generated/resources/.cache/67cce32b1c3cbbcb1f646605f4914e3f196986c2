@@ -1,16 +1,16 @@
-// 1.19.2	2022-09-18T22:48:07.132276	LootTables
+// 1.19.2	2022-09-22T17:43:44.2401519	LootTables
 81f1fef48ce07e74553bf05d16fb3ad2e0888e26 data/gemstones/loot_tables/blocks/amethyst_block.json
 ba7f7d05fcbe7e38bcd0a237a589ea5af9c957d2 data/gemstones/loot_tables/blocks/amethyst_ore.json
 fd4bb893331fb7a40e837b366bc682417ff03452 data/gemstones/loot_tables/blocks/caerula_block.json
-e08e145ba2cdc4d065058a7c909aebe5f8401d9e data/gemstones/loot_tables/blocks/caerula_ore.json
+ae257bc1816d327e6796c584cdb1bc4cf9690aa6 data/gemstones/loot_tables/blocks/caerula_ore.json
 da2109998e9f2de6522ddbd57c4bfa93ba9151cc data/gemstones/loot_tables/blocks/citrine_block.json
 641a138392d0bcbc322d921ab6cfa6f767b84b8d data/gemstones/loot_tables/blocks/citrine_ore.json
 f8adf2abdfbf24e42a2b97b03c41954f4fea8e04 data/gemstones/loot_tables/blocks/diopside_block.json
 9096bae9eaf69bbc2dcfed694a3b686575c967b8 data/gemstones/loot_tables/blocks/diopside_ore.json
 08cfcde25bee897005d207068492da7d0603320a data/gemstones/loot_tables/blocks/ender_block.json
-20a0a73fe8d6bbea6d3075562ab3ce34134b17ab data/gemstones/loot_tables/blocks/ender_ore.json
+2276527f25c8ec15fcc1b12c9f04f98156d187c9 data/gemstones/loot_tables/blocks/ender_ore.json
 6b21485b7bf59220d5974c7b5e30293cc7397169 data/gemstones/loot_tables/blocks/energetic_block.json
-9d7320bc73675c0ee177d9d5e082817a3e5321c9 data/gemstones/loot_tables/blocks/energetic_ore.json
+6f8c36a558f3b027bf1c03996456c3378e9369df data/gemstones/loot_tables/blocks/energetic_ore.json
 76c8aeea33a98f24b19a13820a506d89b600ea0b data/gemstones/loot_tables/blocks/jade_block.json
 e0359fcb3960df5467dd498254fc3cdfc093a68c data/gemstones/loot_tables/blocks/jade_ore.json
 30a9059740925831b88d15287f40953bda108acd data/gemstones/loot_tables/blocks/ruby_block.json
@@ -18,4 +18,4 @@ e0359fcb3960df5467dd498254fc3cdfc093a68c data/gemstones/loot_tables/blocks/jade_
 83c6a845507e030da8877d2b17000a665fee3416 data/gemstones/loot_tables/blocks/sapphire_block.json
 5d33ba78c99c5debdc3f3b9c393b9fe230ebb715 data/gemstones/loot_tables/blocks/sapphire_ore.json
 650637ac707697b2ff257d0aa5ba204f5791f048 data/gemstones/loot_tables/blocks/tin_block.json
-fa3265427506f647b447c5ee1f63c931d663fefc data/gemstones/loot_tables/blocks/tin_ore.json
+50d075b132eb75639fee410760b5130d3d1c721e data/gemstones/loot_tables/blocks/tin_ore.json

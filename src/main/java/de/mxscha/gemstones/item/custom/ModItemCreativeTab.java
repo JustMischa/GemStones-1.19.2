@@ -21,4 +21,11 @@ public class ModItemCreativeTab {
             return new ItemStack(ModBlocks.CITRINE_ORE.get());
         }
     };
+
+    public static final CreativeModeTab ARMORY_GEMSTONES = new CreativeModeTab("armory_gemstones") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(Items.DIAMOND_CHESTPLATE);
+        }
+    };
 }

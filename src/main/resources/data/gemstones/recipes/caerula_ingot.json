@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gemstones:caerula_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "gemstones:caerula_ingot"
+  }
+}

@@ -5,10 +5,16 @@
   "item.gemstones.amethyst_gem": "Amethyst Gem",
   "item.gemstones.diopside_gem": "Diopside Gem",
   "item.gemstones.jade_gem": "Jade Gem",
+  "item.gemstones.caerula_shard": "Caerula Shard",
+  "item.gemstones.raw_caerula": "Raw Caerula",
+  "item.gemstones.raw_energetic": "Raw Energetic",
+  "item.gemstones.raw_tin": "Raw Tin",
+  "item.gemstones.raw_ender": "Raw Ender",
   "item.gemstones.caerula_ingot": "Caerula Ingot",
   "item.gemstones.energetic_ingot": "Energetic Ingot",
   "item.gemstones.tin_ingot": "Tin Ingot",
   "item.gemstones.ender_ingot": "Ender Ingot",
+  "item.gemstones.sapphire_pickaxe": "Sapphire Pickaxe",
   "block.gemstones.sapphire_ore": "Sapphire Ore",
   "block.gemstones.ruby_ore": "Ruby Ore",
   "block.gemstones.citrine_ore": "Citrine Ore",
@@ -30,5 +36,6 @@
   "block.gemstones.tin_block": "Tin Block",
   "block.gemstones.ender_block": "Ender Block",
   "itemGroup.block_gemstones": "GemStones Blocks",
-  "itemGroup.item_gemstones": "GemStones Items"
+  "itemGroup.item_gemstones": "GemStones Items",
+  "itemGroup.armory_gemstones": "GemStones Items"
 }
