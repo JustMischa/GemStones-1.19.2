@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "E": {
+      "item": "gemstones:ruby_gem"
+    }
+  },
+  "pattern": [
+    "EE ",
+    "E/ ",
+    " / "
+  ],
+  "result": {
+    "item": "gemstones:ruby_axe"
+  }
+}

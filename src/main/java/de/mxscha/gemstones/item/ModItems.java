@@ -31,7 +31,6 @@ public class ModItems {
     public static final RegistryObject<Item> ENDER_INGOT = ITEMS.register("ender_ingot", () -> new Item(new Item.Properties().tab(ModItemCreativeTab.ITEM_GEMSTONES)));
     public static final RegistryObject<Item> FUSION_INGOT = ITEMS.register("fusion_ingot", () -> new Item(new Item.Properties().tab(ModItemCreativeTab.ITEM_GEMSTONES)));
     public static final RegistryObject<Item> FUSION_NETHERITE_INGOT = ITEMS.register("fusion_netherite_ingot", () -> new Item(new Item.Properties().tab(ModItemCreativeTab.ITEM_GEMSTONES)));
-
     public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword", () -> new SwordItem(ModToolTiers.SAPPHIRE, 4, -2.3F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
     public static final RegistryObject<Item> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe", () -> new PickaxeItem(ModToolTiers.SAPPHIRE, 1, -2.8F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
     public static final RegistryObject<Item> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel", () -> new ShovelItem(ModToolTiers.SAPPHIRE, 1.5F, -3.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "E": {
+      "item": "gemstones:citrine_gem"
+    }
+  },
+  "pattern": [
+    "EE ",
+    " / ",
+    " / "
+  ],
+  "result": {
+    "item": "gemstones:citrine_hoe"
+  }
+}
