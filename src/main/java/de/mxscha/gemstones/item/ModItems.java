@@ -49,7 +49,7 @@ public class ModItems {
     public static final RegistryObject<Item> CITRINE_AXE = ITEMS.register("citrine_axe", () -> new AxeItem(ModToolTiers.CITRINE, 2, 3f, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
     public static final RegistryObject<Item> CITRINE_HOE = ITEMS.register("citrine_hoe", () -> new HoeItem(ModToolTiers.CITRINE, 2, 3f, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
     public static final RegistryObject<Item> CITRINE_SHOVEL = ITEMS.register("citrine_shovel", () -> new ShovelItem(ModToolTiers.CITRINE, 2, 3f, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
-    public static final RegistryObject<Item> CITRINE_PAXEL = ITEMS.register("citrine_pickaxe", () -> new PaxelItem(ModToolTiers.CITRINE, 2, 3f, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> CITRINE_PAXEL = ITEMS.register("citrine_paxel", () -> new PaxelItem(ModToolTiers.CITRINE, 2, 3f, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
     public static final RegistryObject<Item> AMETHYST_SWORD = ITEMS.register("amethyst_sword", () -> new SwordItem(ModToolTiers.AMETHYST, 4, -2.3F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
     public static final RegistryObject<Item> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe", () -> new PickaxeItem(ModToolTiers.AMETHYST, 1, -2.8F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
     public static final RegistryObject<Item> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel", () -> new ShovelItem(ModToolTiers.AMETHYST, 1.5F, -3.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));

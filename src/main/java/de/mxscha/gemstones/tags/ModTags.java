@@ -10,8 +10,7 @@ public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> NEEDS_TIN_TOOL = tag("needs_tin_tool");
         public static final TagKey<Block> NEEDS_AT_LEAST_SAPPHIRE_TOOL = tag("needs_sapphire_tool");
-        public static final TagKey<Block> PAXEL_MINEABLE = tag("paxel_mineable");
-
+        public static final TagKey<Block> PAXEL_MINEABLE = tag("mineable/paxel");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(GemStones.MOD_ID, name));
