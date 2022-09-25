@@ -1,4 +1,4 @@
-// 1.19.2	2022-09-25T17:27:27.2335827	Recipes
+// 1.19.2	2022-09-25T20:10:27.0753802	Recipes
 3508ebe8ac54770d73ff0592dafb955ef91486a2 data/gemstones/advancements/recipes/armory_gemstones/amethyst_axe.json
 cfc7dfbda3fb5a866ac752933694f9e6a9a7c8f6 data/gemstones/advancements/recipes/armory_gemstones/amethyst_hoe.json
 f6fe34ad32fc59e8d909296b8078dcd4fbb51b40 data/gemstones/advancements/recipes/armory_gemstones/amethyst_pickaxe.json
@@ -44,6 +44,11 @@ da36110f99fb5a01951b92e013a7734a7ce7a976 data/gemstones/advancements/recipes/arm
 7c4c60a0fe1a7e2b32b2d835486f6ab53d3fe2dc data/gemstones/advancements/recipes/armory_gemstones/sapphire_pickaxe.json
 9e115fd7622080f87f224b2aebbcad612a02607d data/gemstones/advancements/recipes/armory_gemstones/sapphire_shovel.json
 2511938d00773da6d174c105ab070cd59c4f3648 data/gemstones/advancements/recipes/armory_gemstones/sapphire_sword.json
+4cfd6c44e4f1ad166dc5e1b660b6201a210f2a1e data/gemstones/advancements/recipes/armory_gemstones/tin_axe.json
+0a8d18734d4e765bbf7e4deb6b3ca04ca5fdc1fa data/gemstones/advancements/recipes/armory_gemstones/tin_hoe.json
+0ee9548f5be574c839de91bf55c545d81cdfad8d data/gemstones/advancements/recipes/armory_gemstones/tin_pickaxe.json
+2d09e1b3d2d5699b1c35923980fbda57beb112d9 data/gemstones/advancements/recipes/armory_gemstones/tin_shovel.json
+112c4cdc45ef907dc8d1bace303c2a5516464f9e data/gemstones/advancements/recipes/armory_gemstones/tin_sword.json
 2981c2a3a95ccbb9cee25e61fc48316b15bd8891 data/gemstones/advancements/recipes/block_gemstones/amethyst_block.json
 27dc0a35a9d431de52de536e10742e03acb229d7 data/gemstones/advancements/recipes/block_gemstones/caerula_block.json
 6763b82f8834b7dd8f840a686d801fe9bf0f9993 data/gemstones/advancements/recipes/block_gemstones/citrine_block.json
@@ -129,5 +134,10 @@ b8ce7d8296bf003f62dd7f45c498eee7fee14d73 data/gemstones/recipes/sapphire_hoe.jso
 e1898897740ef3b71e4fd2f37e05a23cba8be33b data/gemstones/recipes/sapphire_pickaxe.json
 0db447d6821e276713f0c7bccd84631036db33a0 data/gemstones/recipes/sapphire_shovel.json
 c9a058ef135188161627cd9e15accdf28510b963 data/gemstones/recipes/sapphire_sword.json
+25bf12f4ec813f15d8b34e2861ae3dee2168de4f data/gemstones/recipes/tin_axe.json
 764bdfb8c113968c1f0fc626451a4e37c537ebdb data/gemstones/recipes/tin_block.json
+9007f34fbd491b731691282bb3cd45f7a0f7e310 data/gemstones/recipes/tin_hoe.json
 f843ae592be2c1d6f9bd3680b8c32a3a91c6ef4f data/gemstones/recipes/tin_ingot.json
+eff06040d3c1dd669f43e77653404143143e4fc3 data/gemstones/recipes/tin_pickaxe.json
+6aab6f0221f7227f14a409f093b9dfe772558f02 data/gemstones/recipes/tin_shovel.json
+11a0c722aeb30884d99061e713f36c9020197f33 data/gemstones/recipes/tin_sword.json

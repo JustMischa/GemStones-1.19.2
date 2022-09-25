@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "E": {
+      "item": "gemstones:tin_ingot"
+    }
+  },
+  "pattern": [
+    "E",
+    "E",
+    "/"
+  ],
+  "result": {
+    "item": "gemstones:tin_sword"
+  }
+}

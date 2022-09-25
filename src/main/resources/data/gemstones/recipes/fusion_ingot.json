@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "E": {
+      "item": "gemstones:ruby_gem"
+    },
+    "Q": {
+      "item": "gemstones:caerula_shard"
+    },
+    "R": {
+      "item": "gemstones:citrine_gem"
+    },
+    "T": {
+      "item": "gemstones:diopside_gem"
+    },
+    "W": {
+      "item": "gemstones:sapphire_gem"
+    },
+    "Z": {
+      "item": "gemstones:ender_ingot"
+    }
+  },
+  "pattern": [
+    "QRQ",
+    "WZE",
+    "QTQ"
+  ],
+  "result": {
+    "item": "gemstones:fusion_ingot"
+  }
+}
