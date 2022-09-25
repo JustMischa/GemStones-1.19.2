@@ -19,7 +19,7 @@ public class CaerulaOreBlock extends ModOreBlock {
     @Override
     public boolean onDestroyedByPlayer(BlockState state, Level level, BlockPos pos, Player player, boolean willHarvest, FluidState fluid) {
         int chanceOfCaerulaShard = new Random().nextInt(100);
-        if (chanceOfCaerulaShard >= 50) {
+        if (chanceOfCaerulaShard >= 30) {
             popResource(level, pos, new ItemStack(ModItems.CAERULA_SHARD.get(), new Random().nextInt(3)));
         }
         return super.onDestroyedByPlayer(state, level, pos, player, willHarvest, fluid);

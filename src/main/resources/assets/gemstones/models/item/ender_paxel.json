@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "gemstones:item/enderruby_paxel.json_paxel"
+  }
+}

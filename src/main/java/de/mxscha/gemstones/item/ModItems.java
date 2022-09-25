@@ -55,7 +55,42 @@ public class ModItems {
     public static final RegistryObject<Item> AMETHYST_AXE = ITEMS.register("amethyst_axe",() -> new AxeItem(ModToolTiers.AMETHYST, 5.0F, -3.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
     public static final RegistryObject<Item> AMETHYST_HOE = ITEMS.register("amethyst_hoe", () -> new HoeItem(ModToolTiers.AMETHYST, -3, 0.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
     public static final RegistryObject<Item> AMETHYST_PAXEL = ITEMS.register("amethyst_paxel", () -> new PaxelItem(ModToolTiers.AMETHYST, 5.0F, -2.8F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
-
+    public static final RegistryObject<Item> DIOPSIDE_SWORD = ITEMS.register("diopside_sword", () -> new SwordItem(ModToolTiers.DIOPSIDE, 4, -2.3F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> DIOPSIDE_PICKAXE = ITEMS.register("diopside_pickaxe", () -> new PickaxeItem(ModToolTiers.DIOPSIDE, 1, -2.8F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> DIOPSIDE_SHOVEL = ITEMS.register("diopside_shovel", () -> new ShovelItem(ModToolTiers.DIOPSIDE, 1.5F, -3.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> DIOPSIDE_AXE = ITEMS.register("diopside_axe",() -> new AxeItem(ModToolTiers.DIOPSIDE, 5.0F, -3.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> DIOPSIDE_HOE = ITEMS.register("diopside_hoe", () -> new HoeItem(ModToolTiers.DIOPSIDE, -3, 0.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> DIOPSIDE_PAXEL = ITEMS.register("diopside_paxel", () -> new PaxelItem(ModToolTiers.DIOPSIDE, 5.0F, -2.8F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> JADE_SWORD = ITEMS.register("jade_sword", () -> new SwordItem(ModToolTiers.JADE, 4, -2.3F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> JADE_PICKAXE = ITEMS.register("jade_pickaxe", () -> new PickaxeItem(ModToolTiers.JADE, 1, -2.8F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> JADE_SHOVEL = ITEMS.register("jade_shovel", () -> new ShovelItem(ModToolTiers.JADE, 1.5F, -3.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> JADE_AXE = ITEMS.register("jade_axe",() -> new AxeItem(ModToolTiers.JADE, 5.0F, -3.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> JADE_HOE = ITEMS.register("jade_hoe", () -> new HoeItem(ModToolTiers.JADE, -3, 0.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> JADE_PAXEL = ITEMS.register("jade_paxel", () -> new PaxelItem(ModToolTiers.JADE, 5.0F, -2.8F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> CAERULA_SWORD = ITEMS.register("caerula_sword", () -> new SwordItem(ModToolTiers.CAERULA, 4, -2.3F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> CAERULA_PICKAXE = ITEMS.register("caerula_pickaxe", () -> new PickaxeItem(ModToolTiers.CAERULA, 1, -2.8F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> CAERULA_SHOVEL = ITEMS.register("caerula_shovel", () -> new ShovelItem(ModToolTiers.CAERULA, 1.5F, -3.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> CAERULA_AXE = ITEMS.register("caerula_axe",() -> new AxeItem(ModToolTiers.CAERULA, 5.0F, -3.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> CAERULA_HOE = ITEMS.register("caerula_hoe", () -> new HoeItem(ModToolTiers.CAERULA, -3, 0.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> CAERULA_PAXEL = ITEMS.register("caerula_paxel", () -> new PaxelItem(ModToolTiers.CAERULA, 5.0F, -2.8F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> ENDER_SWORD = ITEMS.register("ender_sword", () -> new SwordItem(ModToolTiers.ENDER, 4, -2.3F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> ENDER_PICKAXE = ITEMS.register("ender_pickaxe", () -> new PickaxeItem(ModToolTiers.ENDER, 1, -2.8F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> ENDER_SHOVEL = ITEMS.register("ender_shovel", () -> new ShovelItem(ModToolTiers.ENDER, 1.5F, -3.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> ENDER_AXE = ITEMS.register("ender_axe",() -> new AxeItem(ModToolTiers.ENDER, 5.0F, -3.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> ENDER_HOE = ITEMS.register("ender_hoe", () -> new HoeItem(ModToolTiers.ENDER, -3, 0.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> ENDER_PAXEL = ITEMS.register("ender_paxel", () -> new PaxelItem(ModToolTiers.ENDER, 5.0F, -2.8F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> FUSION_SWORD = ITEMS.register("fusion_sword", () -> new SwordItem(ModToolTiers.FUSION, 4, -2.3F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> FUSION_PICKAXE = ITEMS.register("fusion_pickaxe", () -> new PickaxeItem(ModToolTiers.FUSION, 1, -2.8F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> FUSION_SHOVEL = ITEMS.register("fusion_shovel", () -> new ShovelItem(ModToolTiers.FUSION, 1.5F, -3.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> FUSION_AXE = ITEMS.register("fusion_axe",() -> new AxeItem(ModToolTiers.FUSION, 5.0F, -3.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> FUSION_HOE = ITEMS.register("fusion_hoe", () -> new HoeItem(ModToolTiers.FUSION, -3, 0.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> FUSION_PAXEL = ITEMS.register("fusion_paxel", () -> new PaxelItem(ModToolTiers.FUSION, 5.0F, -2.8F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> FUSION_NETHERITE_SWORD = ITEMS.register("fusion_netherite_sword", () -> new SwordItem(ModToolTiers.FUSION_NETHERITE, 4, -2.3F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> FUSION_NETHERITE_PICKAXE = ITEMS.register("fusion_netherite_pickaxe", () -> new PickaxeItem(ModToolTiers.FUSION_NETHERITE, 1, -2.8F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> FUSION_NETHERITE_SHOVEL = ITEMS.register("fusion_netherite_shovel", () -> new ShovelItem(ModToolTiers.FUSION_NETHERITE, 1.5F, -3.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> FUSION_NETHERITE_AXE = ITEMS.register("fusion_netherite_axe",() -> new AxeItem(ModToolTiers.FUSION_NETHERITE, 5.0F, -3.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> FUSION_NETHERITE_HOE = ITEMS.register("fusion_netherite_hoe", () -> new HoeItem(ModToolTiers.FUSION_NETHERITE, -3, 0.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> FUSION_NETHERITE_PAXEL = ITEMS.register("fusion_netherite_paxel", () -> new PaxelItem(ModToolTiers.FUSION_NETHERITE, 5.0F, -2.8F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

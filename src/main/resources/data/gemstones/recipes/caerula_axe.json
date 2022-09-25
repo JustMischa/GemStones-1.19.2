@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "E": {
+      "item": "gemstones:caerula_ingot"
+    }
+  },
+  "pattern": [
+    "EE ",
+    "E/ ",
+    " / "
+  ],
+  "result": {
+    "item": "gemstones:caerula_axe"
+  }
+}

@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "cookingtime": 150,
-  "experience": 1.7,
-  "ingredient": {
-    "item": "gemstones:raw_caerula"
-  },
-  "result": "gemstones:caerula_ingot"
-}

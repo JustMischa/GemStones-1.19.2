@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "E": {
+      "item": "gemstones:fusion_ingot"
+    }
+  },
+  "pattern": [
+    "E",
+    "/",
+    "/"
+  ],
+  "result": {
+    "item": "gemstones:fusion_shovel"
+  }
+}

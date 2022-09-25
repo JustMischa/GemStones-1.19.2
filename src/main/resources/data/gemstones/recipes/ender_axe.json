@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "E": {
+      "item": "gemstones:ender_ingot"
+    }
+  },
+  "pattern": [
+    "EE ",
+    "E/ ",
+    " / "
+  ],
+  "result": {
+    "item": "gemstones:ender_axe"
+  }
+}
