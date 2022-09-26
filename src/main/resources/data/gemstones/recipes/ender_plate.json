@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "E": {
+      "item": "gemstones:ender_ingot"
+    },
+    "Q": {
+      "item": "gemstones:caerula_shard"
+    },
+    "W": {
+      "item": "gemstones:jade_gem"
+    }
+  },
+  "pattern": [
+    "EQE",
+    "QWQ",
+    "EQE"
+  ],
+  "result": {
+    "item": "gemstones:ender_plate"
+  }
+}

@@ -1,4 +1,4 @@
-// 1.19.2	2022-09-25T20:10:27.0753802	Recipes
+// 1.19.2	2022-09-26T16:14:11.0333925	Recipes
 3508ebe8ac54770d73ff0592dafb955ef91486a2 data/gemstones/advancements/recipes/armory_gemstones/amethyst_axe.json
 cfc7dfbda3fb5a866ac752933694f9e6a9a7c8f6 data/gemstones/advancements/recipes/armory_gemstones/amethyst_hoe.json
 f6fe34ad32fc59e8d909296b8078dcd4fbb51b40 data/gemstones/advancements/recipes/armory_gemstones/amethyst_pickaxe.json
@@ -64,6 +64,7 @@ e758cd9c08b08edf1bd25131e91a7019a7a2cfec data/gemstones/advancements/recipes/ite
 e128e7d03b5db095ee7e407263cdf36987a03742 data/gemstones/advancements/recipes/item_gemstones/citrine_gem.json
 da2ae8ed5804df6988ae9a37dd41f846e4c8fded data/gemstones/advancements/recipes/item_gemstones/diopside_gem.json
 2998050019cea067312d75c3584f53f2de896bee data/gemstones/advancements/recipes/item_gemstones/ender_ingot.json
+690c9957b92ea2a82efc4efdc6411b4c3076634e data/gemstones/advancements/recipes/item_gemstones/ender_plate.json
 e1d8841edeeacc47e0221addd2dd507ce71bb54c data/gemstones/advancements/recipes/item_gemstones/energetic_ingot.json
 04da86ea608e6e69a943f6e9e7766d744dbd7e76 data/gemstones/advancements/recipes/item_gemstones/fusion_ingot.json
 316bc48a9888fd80c66f306fc5ea6f27706987aa data/gemstones/advancements/recipes/item_gemstones/jade_gem.json
@@ -103,6 +104,7 @@ b7dee7bb73972c1e88cb010817f9d0db0e09b279 data/gemstones/recipes/ender_block.json
 d261eeb0aa69f9a1415e66582b3ad5fcf9919fb0 data/gemstones/recipes/ender_hoe.json
 8b933e4d4a8919aca206b51295b50386c27308e2 data/gemstones/recipes/ender_ingot.json
 607ac94ebf3c9c7ce5ed212453fde3b6e4333fd8 data/gemstones/recipes/ender_pickaxe.json
+70e489be017dda581fc2c25ccec51baf33497eb3 data/gemstones/recipes/ender_plate.json
 d36ce33f4079e0ae0fc74b9afd496c527abf5daf data/gemstones/recipes/ender_shovel.json
 a1c3794a9fc19c25c3eb815eb7973109b6048aa3 data/gemstones/recipes/ender_sword.json
 7ecd551c40fbf4c200a24d72a524587ada868442 data/gemstones/recipes/energetic_block.json

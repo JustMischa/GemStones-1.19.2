@@ -25,7 +25,7 @@ public class ModItemCreativeTab {
     public static final CreativeModeTab ARMORY_GEMSTONES = new CreativeModeTab("armory_gemstones") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(Items.DIAMOND_CHESTPLATE);
+            return new ItemStack(ModItems.JADE_CHESTPLATE.get());
         }
     };
 }

@@ -18,9 +18,12 @@ public class CaerulaOreBlock extends ModOreBlock {
 
     @Override
     public boolean onDestroyedByPlayer(BlockState state, Level level, BlockPos pos, Player player, boolean willHarvest, FluidState fluid) {
+        /*
+            Mit neuen entchantment -> hörere chance auf cearula shard
+         */
         int chanceOfCaerulaShard = new Random().nextInt(100);
-        if (chanceOfCaerulaShard >= 30) {
-            popResource(level, pos, new ItemStack(ModItems.CAERULA_SHARD.get(), new Random().nextInt(3)));
+        if (chanceOfCaerulaShard <= 15) {
+            popResource(level, pos, new ItemStack(ModItems.CAERULA_SHARD.get(), 1));
         }
         return super.onDestroyedByPlayer(state, level, pos, player, willHarvest, fluid);
     }
