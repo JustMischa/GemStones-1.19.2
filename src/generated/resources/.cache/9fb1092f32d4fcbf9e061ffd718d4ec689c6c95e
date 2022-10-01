@@ -1,4 +1,4 @@
-// 1.19.2	2022-09-26T16:14:11.0333925	Recipes
+// 1.19.2	2022-10-01T16:55:42.380222	Recipes
 3508ebe8ac54770d73ff0592dafb955ef91486a2 data/gemstones/advancements/recipes/armory_gemstones/amethyst_axe.json
 cfc7dfbda3fb5a866ac752933694f9e6a9a7c8f6 data/gemstones/advancements/recipes/armory_gemstones/amethyst_hoe.json
 f6fe34ad32fc59e8d909296b8078dcd4fbb51b40 data/gemstones/advancements/recipes/armory_gemstones/amethyst_pickaxe.json
@@ -67,6 +67,7 @@ da2ae8ed5804df6988ae9a37dd41f846e4c8fded data/gemstones/advancements/recipes/ite
 690c9957b92ea2a82efc4efdc6411b4c3076634e data/gemstones/advancements/recipes/item_gemstones/ender_plate.json
 e1d8841edeeacc47e0221addd2dd507ce71bb54c data/gemstones/advancements/recipes/item_gemstones/energetic_ingot.json
 04da86ea608e6e69a943f6e9e7766d744dbd7e76 data/gemstones/advancements/recipes/item_gemstones/fusion_ingot.json
+1efd0729222afeb0269652391fc99344a6084083 data/gemstones/advancements/recipes/item_gemstones/infused_alloy.json
 316bc48a9888fd80c66f306fc5ea6f27706987aa data/gemstones/advancements/recipes/item_gemstones/jade_gem.json
 1976b9cafa7c4da55a3d084e96926fcde27cb68b data/gemstones/advancements/recipes/item_gemstones/ruby_gem.json
 f861998ff4fed367ec8e08aaa60c4caccb14c5f2 data/gemstones/advancements/recipes/item_gemstones/sapphire_gem.json
@@ -111,10 +112,11 @@ a1c3794a9fc19c25c3eb815eb7973109b6048aa3 data/gemstones/recipes/ender_sword.json
 2a7465fdeb94d4a7ec33c8a1f1f7be779bb19014 data/gemstones/recipes/energetic_ingot.json
 f5571ab93ca33bff6e6886ccfcf1255e7b7e45b2 data/gemstones/recipes/fusion_axe.json
 d38bcad688d054c151139a5f474f9f380f3ccf71 data/gemstones/recipes/fusion_hoe.json
-3598c4404ca70ef1b50990f3310fe9cd4fa01f5b data/gemstones/recipes/fusion_ingot.json
+d1b8111a383a59582e5d4e1c6ef0561d4e903c31 data/gemstones/recipes/fusion_ingot.json
 1ec11ace2c056ef75f44e65544ca0d82b753b57a data/gemstones/recipes/fusion_pickaxe.json
 8f4f749529827daa806cc3285ca3b6f9966c4012 data/gemstones/recipes/fusion_shovel.json
 e3a1b84f934f3491fd34e49d13a910e4ec76069b data/gemstones/recipes/fusion_sword.json
+f60a2116a402a62663fcbd3729785d294c9950ea data/gemstones/recipes/infused_alloy.json
 b495a6adcb1e54d98c956536230ff947db9b2de8 data/gemstones/recipes/jade_axe.json
 97f1b5ca2442828dedbd1ed5a4219c33ed454123 data/gemstones/recipes/jade_block.json
 b2f755cae4eff75e09635c2052c96e3881df9667 data/gemstones/recipes/jade_gem.json

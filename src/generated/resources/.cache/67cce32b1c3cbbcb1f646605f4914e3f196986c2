@@ -1,4 +1,4 @@
-// 1.19.2	2022-09-22T17:43:44.2401519	LootTables
+// 1.19.2	2022-10-01T16:55:42.3822233	LootTables
 81f1fef48ce07e74553bf05d16fb3ad2e0888e26 data/gemstones/loot_tables/blocks/amethyst_block.json
 ba7f7d05fcbe7e38bcd0a237a589ea5af9c957d2 data/gemstones/loot_tables/blocks/amethyst_ore.json
 fd4bb893331fb7a40e837b366bc682417ff03452 data/gemstones/loot_tables/blocks/caerula_block.json
@@ -13,6 +13,9 @@ f8adf2abdfbf24e42a2b97b03c41954f4fea8e04 data/gemstones/loot_tables/blocks/diops
 6f8c36a558f3b027bf1c03996456c3378e9369df data/gemstones/loot_tables/blocks/energetic_ore.json
 76c8aeea33a98f24b19a13820a506d89b600ea0b data/gemstones/loot_tables/blocks/jade_block.json
 e0359fcb3960df5467dd498254fc3cdfc093a68c data/gemstones/loot_tables/blocks/jade_ore.json
+42dd38fe0ae2dacb2e2b5c7dd252a113a36a99ac data/gemstones/loot_tables/blocks/oil_generator.json
+9c2c03ef5e0886a20c6c45092c577031491a3c8c data/gemstones/loot_tables/blocks/oil_infused_stone.json
+2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/gemstones/loot_tables/blocks/oil_water_block.json
 30a9059740925831b88d15287f40953bda108acd data/gemstones/loot_tables/blocks/ruby_block.json
 4717f772c586d02b26ab32f0c20f4189238228d9 data/gemstones/loot_tables/blocks/ruby_ore.json
 83c6a845507e030da8877d2b17000a665fee3416 data/gemstones/loot_tables/blocks/sapphire_block.json

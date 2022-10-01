@@ -34,5 +34,7 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.ENERGETIC_BLOCK.get());
         simpleBlock(ModBlocks.TIN_BLOCK.get());
         simpleBlock(ModBlocks.ENDER_BLOCK.get());
+        simpleBlock(ModBlocks.OIL_INFUSED_STONE.get());
+        simpleBlock(ModBlocks.OIL_GENERATOR.get());
     }
 }

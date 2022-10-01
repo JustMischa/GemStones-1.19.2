@@ -20,6 +20,8 @@
     "gemstones:caerula_block",
     "gemstones:energetic_block",
     "gemstones:tin_block",
-    "gemstones:ender_block"
+    "gemstones:ender_block",
+    "gemstones:oil_infused_stone",
+    "gemstones:oil_generator"
   ]
 }

@@ -20,7 +20,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     /**
      * TODO: furnace recipes (raw materials -> Ingots)
-     * TODO: Armor Recipes TIN-FUSION_NETHERITE
+     * TODO: Armor Recipes TIN - FUSION_NETHERITE
      */
 
     @Override
@@ -47,6 +47,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(ModItems.ENDER_INGOT.get(), 9).requires(ModBlocks.ENDER_BLOCK.get(), 1).unlockedBy("has_another_ender_block", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.ENDER_BLOCK.get()).build())).save(finishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(ModItems.ENDER_PLATE.get()).define('Q', ModItems.CAERULA_SHARD.get()).define('W', ModItems.JADE_GEM.get()).define('E', ModItems.ENDER_INGOT.get()).pattern("EQE").pattern("QWQ").pattern("EQE").unlockedBy("has_another_ender_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.ENDER_INGOT.get()).build())).save(finishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(ModItems.FUSION_INGOT.get()).define('Q', ModItems.CAERULA_SHARD.get()).define('W', ModItems.SAPPHIRE_GEM.get()).define('E', ModItems.RUBY_GEM.get()).define('R', ModItems.CITRINE_GEM.get()).define('T', ModItems.DIOPSIDE_GEM.get()).define('Z', ModItems.ENDER_PLATE.get()).pattern("QRQ").pattern("WZE").pattern("QTQ").unlockedBy("has_another_sapphire_gem", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.SAPPHIRE_GEM.get()).build())).save(finishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(ModItems.INFUSED_ALLOY.get()).define('Q', ModItems.TIN_INGOT.get()).define('W', Items.IRON_INGOT).define('E', ModItems.OIL_ESSENCE.get()).pattern("QWQ").pattern("WEW").pattern("QWQ").unlockedBy("has_another_iron_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(Items.IRON_INGOT).build())).save(finishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(ModItems.TIN_SWORD.get()).define('/', Items.STICK).define('E', ModItems.TIN_INGOT.get()).pattern("E").pattern("E").pattern("/").unlockedBy("has_another_tin_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.TIN_INGOT.get()).build())).save(finishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(ModItems.TIN_PICKAXE.get()).define('/', Items.STICK).define('E', ModItems.TIN_INGOT.get()).pattern("EEE").pattern(" / ").pattern(" / ").unlockedBy("has_another_tin_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.TIN_INGOT.get()).build())).save(finishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(ModItems.TIN_AXE.get()).define('/', Items.STICK).define('E', ModItems.TIN_INGOT.get()).pattern("EE ").pattern("E/ ").pattern(" / ").unlockedBy("has_another_tin_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.TIN_INGOT.get()).build())).save(finishedRecipeConsumer);

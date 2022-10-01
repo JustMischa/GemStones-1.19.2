@@ -17,6 +17,9 @@
   "item.gemstones.ender_plate": "Ender Plate",
   "item.gemstones.fusion_ingot": "Fusion Ingot",
   "item.gemstones.fusion_netherite_ingot": "Fusion Netherite Ingot",
+  "item.gemstones.oil_bucket": "Oil Bucket",
+  "item.gemstones.oil_essence": "Oil Essence",
+  "item.gemstones.infused_alloy": "Infused Alloy",
   "item.gemstones.tin_sword": "Tin Sword",
   "item.gemstones.tin_pickaxe": "Tin Pickaxe",
   "item.gemstones.tin_axe": "Tin Axe",
@@ -147,6 +150,8 @@
   "block.gemstones.energetic_block": "Energetic Block",
   "block.gemstones.tin_block": "Tin Block",
   "block.gemstones.ender_block": "Ender Block",
+  "block.gemstones.oil_infused_stone": "Oil Infused Stone",
+  "block.gemstones.oil_generator": "Oil Generator",
   "itemGroup.block_gemstones": "GemStones Blocks",
   "itemGroup.item_gemstones": "GemStones Items",
   "itemGroup.armory_gemstones": "GemStones Items"

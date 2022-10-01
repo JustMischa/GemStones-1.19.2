@@ -1,0 +1,12 @@
+{
+  "type": "gemstones:oil_generator",
+  "ingredients": [
+    {
+      "item": "gemstones:infused_alloy"
+    }
+  ],
+  "output": {
+    "item": "gemstones:oil_bucket",
+    "count": 1
+  }
+}

@@ -1,4 +1,4 @@
-// 1.19.2	2022-09-18T22:48:07.1352771	Block States: gemstones
+// 1.19.2	2022-10-01T16:55:42.3772235	Block States: gemstones
 9bf450bd8d0adef4e5e128abfd157016a52a1fce assets/gemstones/blockstates/amethyst_block.json
 4b4422651b27298a5780992988cdea3b1d60682a assets/gemstones/blockstates/amethyst_ore.json
 8d844211e69ca41dde207452a1ce79df0ee44328 assets/gemstones/blockstates/caerula_block.json
@@ -13,6 +13,8 @@ a1b45037594efdcb939bd73e9543d6629ebaaeb9 assets/gemstones/blockstates/ender_bloc
 3ab338d11a6828068aff9c8d84c0eecd791d3962 assets/gemstones/blockstates/energetic_ore.json
 50e7f64b3790ecd83b611fc4b94995abf04dea63 assets/gemstones/blockstates/jade_block.json
 c11136c881fb33f960b56191bb185e159929683a assets/gemstones/blockstates/jade_ore.json
+c4a3dec55f7f82e00a3bbaa70c03b781139b8200 assets/gemstones/blockstates/oil_generator.json
+53f0b95cb9071d1eee8a5dd066f355c8dfb93ea1 assets/gemstones/blockstates/oil_infused_stone.json
 f6f8bd3162ba1ac58c0db0e73d72cb89dc43dc00 assets/gemstones/blockstates/ruby_block.json
 59abd5c9c42222754d7de8e250baf131e84f4f03 assets/gemstones/blockstates/ruby_ore.json
 768b26e9f247dfb1be5adfa28e859a7af610a296 assets/gemstones/blockstates/sapphire_block.json
@@ -33,6 +35,8 @@ b42c84cae283272dce8b69e4be3249088cce1a82 assets/gemstones/models/block/ender_ore
 1cd17e4867aa1df080dde1d86f492e1eadb70d58 assets/gemstones/models/block/energetic_ore.json
 431902eee7be597d7872cf5557444c8492069d43 assets/gemstones/models/block/jade_block.json
 6af6c76836d681d03b7a5dd55f544ff55c790e9c assets/gemstones/models/block/jade_ore.json
+1841adbfd2b6caf5b42096e775f9c47b039277b9 assets/gemstones/models/block/oil_generator.json
+c0190314902bfdcb40633eb939406acee4fff3a4 assets/gemstones/models/block/oil_infused_stone.json
 06f82f07ce49c3789f4ee5abe8b5df42283085c0 assets/gemstones/models/block/ruby_block.json
 2b8af7a19cacc6b8f10e63b2ab11638ad9357181 assets/gemstones/models/block/ruby_ore.json
 e1b3515fb7e720421ae21830a1e81d037fd0cfb0 assets/gemstones/models/block/sapphire_block.json

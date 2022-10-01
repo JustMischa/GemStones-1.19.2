@@ -6,6 +6,7 @@ import de.mxscha.gemstones.item.custom.ModItemCreativeTab;
 import de.mxscha.gemstones.item.custom.PaxelItem;
 import de.mxscha.gemstones.item.custom.tiers.ModArmorTiers;
 import de.mxscha.gemstones.item.custom.tiers.ModToolTiers;
+import de.mxscha.gemstones.utils.fluid.ModFluids;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -35,6 +36,7 @@ public class ModItems {
     public static final RegistryObject<Item> ENDER_PLATE = ITEMS.register("ender_plate", () -> new Item(new Item.Properties().tab(ModItemCreativeTab.ITEM_GEMSTONES)));
     public static final RegistryObject<Item> FUSION_INGOT = ITEMS.register("fusion_ingot", () -> new Item(new Item.Properties().tab(ModItemCreativeTab.ITEM_GEMSTONES)));
     public static final RegistryObject<Item> FUSION_NETHERITE_INGOT = ITEMS.register("fusion_netherite_ingot", () -> new Item(new Item.Properties().tab(ModItemCreativeTab.ITEM_GEMSTONES)));
+    public static final RegistryObject<Item> INFUSED_ALLOY = ITEMS.register("infused_alloy", () -> new Item(new Item.Properties().tab(ModItemCreativeTab.ITEM_GEMSTONES)));
     public static final RegistryObject<Item> TIN_SWORD = ITEMS.register("tin_sword", () -> new SwordItem(ModToolTiers.TIN, 4, -2.3F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
     public static final RegistryObject<Item> TIN_PICKAXE = ITEMS.register("tin_pickaxe", () -> new PickaxeItem(ModToolTiers.TIN, 1, -2.8F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
     public static final RegistryObject<Item> TIN_SHOVEL = ITEMS.register("tin_shovel", () -> new ShovelItem(ModToolTiers.TIN, 1.5F, -3.0F, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
@@ -145,6 +147,8 @@ public class ModItems {
     public static final RegistryObject<Item> FUSION_NETHERITE_CHESTPLATE = ITEMS.register("fusion_netherite_chestplate", () -> new ModArmorItem(ModArmorTiers.FUSION_NETHERITE, EquipmentSlot.CHEST, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
     public static final RegistryObject<Item> FUSION_NETHERITE_LEGGINGS = ITEMS.register("fusion_netherite_leggings", () -> new ModArmorItem(ModArmorTiers.FUSION_NETHERITE, EquipmentSlot.LEGS, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
     public static final RegistryObject<Item> FUSION_NETHERITE_BOOTS = ITEMS.register("fusion_netherite_boots", () -> new ModArmorItem(ModArmorTiers.FUSION_NETHERITE, EquipmentSlot.FEET, new Item.Properties().tab(ModItemCreativeTab.ARMORY_GEMSTONES)));
+    public static final RegistryObject<Item> OIL_ESSENCE = ITEMS.register("oil_essence", () -> new Item(new Item.Properties().stacksTo(16).tab(ModItemCreativeTab.ITEM_GEMSTONES)));
+    public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket", () -> new BucketItem(ModFluids.SOURCE_OIL_WATER, new Item.Properties().stacksTo(1).craftRemainder(Items.BUCKET).tab(ModItemCreativeTab.ITEM_GEMSTONES)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

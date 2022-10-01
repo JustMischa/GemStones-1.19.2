@@ -2,7 +2,18 @@ package de.mxscha.gemstones;
 
 import com.mojang.logging.LogUtils;
 import de.mxscha.gemstones.block.ModBlocks;
+import de.mxscha.gemstones.block.custom.entity.ModBlockEntities;
 import de.mxscha.gemstones.item.ModItems;
+import de.mxscha.gemstones.utils.fluid.ModFluids;
+import de.mxscha.gemstones.utils.fluid.ModFluidsTypes;
+import de.mxscha.gemstones.utils.recipes.ModRecipes;
+import de.mxscha.gemstones.utils.screen.ModMenuTypes;
+import de.mxscha.gemstones.utils.screen.OilGeneratorMenu;
+import de.mxscha.gemstones.utils.screen.OilGeneratorScreen;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.gui.screens.OutOfMemoryScreen;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -30,19 +41,30 @@ public class GemStones {
     private void registerGemStones(IEventBus eventBus) {
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModBlockEntities.register(eventBus);
+        ModMenuTypes.register(eventBus);
+        ModRecipes.register(eventBus);
+        ModFluidsTypes.register(eventBus);
+        ModFluids.register(eventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+
     }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
+
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            MenuScreens.register(ModMenuTypes.OIL_GENERATOR_MENU.get(), OilGeneratorScreen::new);
+
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_OIL_WATER.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_OIL_WATER.get(), RenderType.translucent());
         }
     }
 }

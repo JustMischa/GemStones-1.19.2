@@ -4,6 +4,8 @@ import de.mxscha.gemstones.block.ModBlocks;
 import de.mxscha.gemstones.item.ModItems;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlockLootTables extends BlockLoot {
@@ -23,6 +25,7 @@ public class ModBlockLootTables extends BlockLoot {
         this.add(ModBlocks.ENERGETIC_ORE.get(), (block) -> createOreDrop(ModBlocks.ENERGETIC_ORE.get(), ModItems.RAW_ENERGETIC.get()));
         this.add(ModBlocks.TIN_ORE.get(), (block) -> createOreDrop(ModBlocks.TIN_ORE.get(), ModItems.RAW_TIN.get()));
         this.add(ModBlocks.ENDER_ORE.get(), (block) -> createOreDrop(ModBlocks.ENDER_ORE.get(), ModItems.RAW_ENDER.get()));
+        this.add(ModBlocks.OIL_INFUSED_STONE.get(), (block) -> createOreDrop(ModBlocks.OIL_INFUSED_STONE.get(), Blocks.COBBLESTONE.asItem()));
         this.dropSelf(ModBlocks.SAPPHIRE_BLOCK.get());
         this.dropSelf(ModBlocks.RUBY_BLOCK.get());
         this.dropSelf(ModBlocks.CITRINE_BLOCK.get());
@@ -33,6 +36,8 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.ENERGETIC_BLOCK.get());
         this.dropSelf(ModBlocks.TIN_BLOCK.get());
         this.dropSelf(ModBlocks.ENDER_BLOCK.get());
+        this.dropSelf(ModBlocks.OIL_GENERATOR.get());
+        this.dropSelf(ModBlocks.OIL_WATER_BLOCK.get());
         // for leaves
         // this.add(ModBlocks.EXAMPLE_BLOCK.get(), (block) -> createLeavesDrops(block, ModBlocks.EXAMPLE_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }

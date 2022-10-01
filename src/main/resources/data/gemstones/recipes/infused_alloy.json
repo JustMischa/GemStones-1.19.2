@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "E": {
+      "item": "gemstones:oil_essence"
+    },
+    "Q": {
+      "item": "gemstones:tin_ingot"
+    },
+    "W": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "QWQ",
+    "WEW",
+    "QWQ"
+  ],
+  "result": {
+    "item": "gemstones:infused_alloy"
+  }
+}
