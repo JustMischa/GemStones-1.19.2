@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting"
+  "ingredient": {
+    "item": "gemstones:ender_ore"
+  },
+  "result": "gemstones:ender_ingot",
+  "experience": 1.0,
+  "cookingtime": 200
+}

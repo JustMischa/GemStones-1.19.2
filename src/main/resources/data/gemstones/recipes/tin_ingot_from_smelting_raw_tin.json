@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting"
+  "ingredient": {
+    "item": "gemstones:raw_tin"
+  },
+  "result": "gemstones:tin_ingot",
+  "experience": 0.2,
+  "cookingtime": 200
+}

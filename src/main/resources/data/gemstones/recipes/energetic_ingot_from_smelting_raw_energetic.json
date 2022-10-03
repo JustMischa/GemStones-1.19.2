@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting"
+  "ingredient": {
+    "item": "gemstones:raw_energetic"
+  },
+  "result": "gemstones:energetic_ingot",
+  "experience": 1.0,
+  "cookingtime": 200
+}

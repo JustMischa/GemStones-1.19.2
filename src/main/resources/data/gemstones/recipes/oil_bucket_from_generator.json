@@ -6,7 +6,6 @@
     }
   ],
   "output": {
-    "item": "gemstones:oil_bucket",
-    "count": 1
+    "item": "gemstones:oil_bucket"
   }
 }
