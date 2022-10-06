@@ -25,7 +25,7 @@ public class OilGeneratorMenu extends AbstractContainerMenu {
 
     public OilGeneratorMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.OIL_GENERATOR_MENU.get(), id);
-        checkContainerSize(inv, 2);
+        checkContainerSize(inv, 3);
         this.entity = (OilGeneratorBlockEntity) entity;
         this.level = inv.player.level;
         this.data = data;
@@ -34,8 +34,9 @@ public class OilGeneratorMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 80, 17));
-            this.addSlot(new ModResultSlot(handler, 1, 80, 53));
+            this.addSlot(new SlotItemHandler(handler, 0, 66, 17));
+            this.addSlot(new SlotItemHandler(handler, 1, 93, 17));
+            this.addSlot(new ModResultSlot(handler, 2, 80, 53));
         });
         addDataSlots(data);
     }
@@ -67,7 +68,7 @@ public class OilGeneratorMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 2;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 3;  // must be the number of slots you have!
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {

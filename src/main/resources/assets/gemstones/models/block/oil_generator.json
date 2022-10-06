@@ -1,12 +1,8 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "minecraft:block/orientable",
   "textures": {
-    "down": "gemstones:block/oil_generator_bottom",
-    "east": "gemstones:block/oil_generator_side",
-    "north": "gemstones:block/oil_generator_front",
-    "particle": "gemstones:block/oil_generator_bottom",
-    "south": "gemstones:block/oil_generator_side",
-    "up":  "gemstones:block/oil_generator_top",
-    "west":  "gemstones:block/oil_generator_side"
+    "front": "gemstones:block/amethyst_block",
+    "side": "gemstones:block/oil_generator_side",
+    "top": "gemstones:block/oil_generator_top"
   }
 }

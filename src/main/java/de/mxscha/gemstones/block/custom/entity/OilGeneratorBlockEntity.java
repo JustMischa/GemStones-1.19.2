@@ -15,6 +15,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -23,16 +24,34 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import javax.annotation.Nonnull;
 import java.util.Optional;
 
 public class OilGeneratorBlockEntity extends BlockEntity implements MenuProvider {
 
-    private final ItemStackHandler itemHandler = new ItemStackHandler(2) {
+    private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
+        }
+
+        @Override
+        public boolean isItemValid(int slot, @NotNull ItemStack stack) {
+            if (slot == 1) {
+                return stack.is(Items.COAL);
+            }
+            return super.isItemValid(slot, stack);
+        }
+
+        @Override
+        public @NotNull ItemStack insertItem(int slot, @NotNull ItemStack stack, boolean simulate) {
+            if (slot == 1) {
+                if (!isItemValid(slot, stack))
+                    return stack;
+            }
+            return super.insertItem(slot, stack, simulate);
         }
     };
 
@@ -150,7 +169,8 @@ public class OilGeneratorBlockEntity extends BlockEntity implements MenuProvider
         Optional<OilGeneratorRecipe> match = level.getRecipeManager().getRecipeFor(OilGeneratorRecipe.Type.INSTANCE, inventory, level);
         if (hasRecipe(entity)) {
             entity.itemHandler.extractItem(0, 1, false);
-            entity.itemHandler.setStackInSlot(1, new ItemStack(ModItems.OIL_BUCKET.get()));
+            entity.itemHandler.extractItem(1, 1, false);
+            entity.itemHandler.setStackInSlot(2, new ItemStack(ModItems.OIL_BUCKET.get()));
         }
     }
 
@@ -164,14 +184,22 @@ public class OilGeneratorBlockEntity extends BlockEntity implements MenuProvider
         Optional<OilGeneratorRecipe> match = level.getRecipeManager().getRecipeFor(OilGeneratorRecipe.Type.INSTANCE, inventory, level);
 
         return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
-                && canInsertItemIntoOutputSlot(inventory, match.get().getResultItem());
+                && canInsertItemIntoOutputSlot(inventory, match.get().getResultItem()) && hasFuel(inventory);
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack stack) {
-        return inventory.getItem(1).getItem() == stack.getItem() || inventory.getItem(1).isEmpty();
+        return inventory.getItem(2).getItem() == stack.getItem() || inventory.getItem(2).isEmpty();
+    }
+
+    private static boolean hasFuel(SimpleContainer inventory) {
+        return hasFuel(inventory, new ItemStack(Items.COAL));
+    }
+
+    private static boolean hasFuel(SimpleContainer inventory, ItemStack stack) {
+        return inventory.getItem(1).getItem() == stack.getItem();
     }
 
     private static boolean canInsertAmountIntoOutputSlot(SimpleContainer inventory) {
-        return inventory.getItem(1).getCount() < 1;
+        return inventory.getItem(2).getCount() < 1;
     }
 }

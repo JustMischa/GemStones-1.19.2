@@ -25,7 +25,7 @@ public class OilInfusedBlock extends Block {
     @Override
     public boolean onDestroyedByPlayer(BlockState state, Level level, BlockPos pos, Player player, boolean willHarvest, FluidState fluid) {
         int chanceOfEssence = new Random().nextInt(100);
-        if (chanceOfEssence >= 50) {
+        if (chanceOfEssence >= 80) {
             popResource(level, pos, new ItemStack(ModItems.OIL_ESSENCE.get(), 1));
         }
         return super.onDestroyedByPlayer(state, level, pos, player, willHarvest, fluid);

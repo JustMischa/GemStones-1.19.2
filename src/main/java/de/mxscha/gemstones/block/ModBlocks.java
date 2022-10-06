@@ -2,6 +2,7 @@ package de.mxscha.gemstones.block;
 
 import de.mxscha.gemstones.GemStones;
 import de.mxscha.gemstones.block.custom.CaerulaOreBlock;
+import de.mxscha.gemstones.block.custom.GemBurnerBlock;
 import de.mxscha.gemstones.block.custom.OilGeneratorBlock;
 import de.mxscha.gemstones.block.custom.OilInfusedBlock;
 import de.mxscha.gemstones.item.ModItems;
@@ -50,7 +51,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> TIN_BLOCK = registerBlock("tin_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).requiresCorrectToolForDrops()), ModItemCreativeTab.BLOCK_GEMSTONES);
     public static final RegistryObject<Block> ENDER_BLOCK = registerBlock("ender_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).requiresCorrectToolForDrops()), ModItemCreativeTab.BLOCK_GEMSTONES);
     public static final RegistryObject<Block> OIL_INFUSED_STONE = registerBlock("oil_infused_stone", () -> new OilInfusedBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops()), ModItemCreativeTab.BLOCK_GEMSTONES);
+
     public static final RegistryObject<Block> OIL_GENERATOR = registerBlock("oil_generator", () -> new OilGeneratorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().noOcclusion()), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> GEM_BURNER = registerBlock("gem_burner", () -> new GemBurnerBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().noOcclusion()), ModItemCreativeTab.BLOCK_GEMSTONES);
+
 
     public static final RegistryObject<LiquidBlock> OIL_WATER_BLOCK = BLOCKS.register("oil_water_block", () -> new LiquidBlock(ModFluids.SOURCE_OIL_WATER, BlockBehaviour.Properties.copy(Blocks.WATER)));
 

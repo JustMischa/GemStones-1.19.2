@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "gemstones:tin_ore",
     "gemstones:sapphire_ore",
     "gemstones:ruby_ore",
     "gemstones:citrine_ore",
@@ -9,7 +10,6 @@
     "gemstones:jade_ore",
     "gemstones:caerula_ore",
     "gemstones:energetic_ore",
-    "gemstones:tin_ore",
     "gemstones:ender_ore",
     "gemstones:sapphire_block",
     "gemstones:ruby_block",
@@ -22,6 +22,7 @@
     "gemstones:tin_block",
     "gemstones:ender_block",
     "gemstones:oil_infused_stone",
-    "gemstones:oil_generator"
+    "gemstones:oil_generator",
+    "gemstones:gem_burner"
   ]
 }
