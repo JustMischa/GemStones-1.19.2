@@ -28,7 +28,6 @@ public class OilGeneratorBlock extends BaseEntityBlock {
 
     public OilGeneratorBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.WEST));
     }
 
     /*
@@ -43,7 +42,7 @@ public class OilGeneratorBlock extends BaseEntityBlock {
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return this.defaultBlockState().setValue(FACING, Direction.EAST);
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> state) {

@@ -14,6 +14,7 @@ public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>>BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, GemStones.MOD_ID);
 
     public static final RegistryObject<BlockEntityType<OilGeneratorBlockEntity>> OIL_GENERATOR = BLOCK_ENTITIES.register("oil_generator", () -> BlockEntityType.Builder.of(OilGeneratorBlockEntity::new, ModBlocks.OIL_GENERATOR.get()).build(null));
+    public static final RegistryObject<BlockEntityType<GemBurnerBlockEntity>> GEM_BURNER = BLOCK_ENTITIES.register("gem_burner", () -> BlockEntityType.Builder.of(GemBurnerBlockEntity::new, ModBlocks.GEM_BURNER.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

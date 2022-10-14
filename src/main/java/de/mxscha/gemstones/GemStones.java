@@ -7,9 +7,7 @@ import de.mxscha.gemstones.item.ModItems;
 import de.mxscha.gemstones.utils.fluid.ModFluids;
 import de.mxscha.gemstones.utils.fluid.ModFluidsTypes;
 import de.mxscha.gemstones.utils.recipes.ModRecipes;
-import de.mxscha.gemstones.utils.screen.ModMenuTypes;
-import de.mxscha.gemstones.utils.screen.OilGeneratorMenu;
-import de.mxscha.gemstones.utils.screen.OilGeneratorScreen;
+import de.mxscha.gemstones.utils.screen.*;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.gui.screens.OutOfMemoryScreen;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -62,6 +60,7 @@ public class GemStones {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             MenuScreens.register(ModMenuTypes.OIL_GENERATOR_MENU.get(), OilGeneratorScreen::new);
+            MenuScreens.register(ModMenuTypes.GEM_BURNER_MENU.get(), GemBurnerScreen::new);
 
             ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_OIL_WATER.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_OIL_WATER.get(), RenderType.translucent());

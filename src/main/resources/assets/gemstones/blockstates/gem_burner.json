@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "gemstones:block/gem_burner"
+    },
+    "facing=south": {
+      "model": "gemstones:block/gem_burner",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "gemstones:block/gem_burner",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "gemstones:block/gem_burner",
+      "y": 90
     }
   }
 }

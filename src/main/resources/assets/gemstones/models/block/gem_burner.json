@@ -1,10 +1,8 @@
 {
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "bottom": "gemstones:block/oil_generator_top",
-    "side": "gemstones:block/oil_generator_side",
-    "top": "gemstones:block/oil_generator_top",
-    "front": "gemstones:block/oil_generator_front",
-    "particle": "gemstones:block/oil_generator_side"
-  }
+	"parent": "minecraft:block/orientable",
+	"textures": {
+		"front": "gemstones:block/gem_burner_front",
+		"side": "gemstones:block/gem_burner_side",
+		"top": "gemstones:block/gem_burner_top"
+	}
 }
