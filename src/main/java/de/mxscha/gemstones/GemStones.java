@@ -6,6 +6,7 @@ import de.mxscha.gemstones.block.custom.entity.ModBlockEntities;
 import de.mxscha.gemstones.item.ModItems;
 import de.mxscha.gemstones.utils.fluid.ModFluids;
 import de.mxscha.gemstones.utils.fluid.ModFluidsTypes;
+import de.mxscha.gemstones.utils.networking.ModMessages;
 import de.mxscha.gemstones.utils.recipes.ModRecipes;
 import de.mxscha.gemstones.utils.screen.*;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -47,7 +48,9 @@ public class GemStones {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            ModMessages.register();
+        });
     }
 
     @SubscribeEvent

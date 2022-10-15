@@ -22,7 +22,6 @@ public class ModFluids {
 
     public static final ForgeFlowingFluid.Properties OIL_WATER_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(ModFluidsTypes.OIL_FLUID_TYPE, SOURCE_OIL_WATER, FLOWING_OIL_WATER).slopeFindDistance(2).levelDecreasePerBlock(2).block(ModBlocks.OIL_WATER_BLOCK).bucket(ModItems.OIL_BUCKET);
 
-
     public static void register(IEventBus eventBus) {
         FLUIDS.register(eventBus);
     }

@@ -1,9 +1,9 @@
 package de.mxscha.gemstones.block.custom.entity;
 
-import de.mxscha.gemstones.item.ModItems;
-import de.mxscha.gemstones.utils.recipes.custom.OilGeneratorRecipe;
+import de.mxscha.gemstones.utils.fluid.ModFluids;
+import de.mxscha.gemstones.utils.networking.ModMessages;
+import de.mxscha.gemstones.utils.networking.packet.FluidSyncS2CPacket;
 import de.mxscha.gemstones.utils.screen.GemBurnerMenu;
-import de.mxscha.gemstones.utils.screen.OilGeneratorMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -22,6 +22,10 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
+import net.minecraftforge.fluids.capability.IFluidHandler;
+import net.minecraftforge.fluids.capability.templates.FluidTank;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
@@ -29,11 +33,10 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
-import java.util.Optional;
 
 public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
 
-    private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
+    private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
@@ -41,10 +44,10 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
 
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
-            if (slot == 1) {
-                return stack.is(Items.COAL);
-            }
-            return super.isItemValid(slot, stack);
+            return switch (slot) {
+                case 3 -> stack.getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY).isPresent();
+                default -> super.isItemValid(slot, stack);
+            };
         }
 
         @Override
@@ -53,11 +56,32 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
                 if (!isItemValid(slot, stack))
                     return stack;
             }
+            if (slot == 3) {
+                if(!isItemValid(slot, stack)) {
+                    return stack;
+                }
+            }
             return super.insertItem(slot, stack, simulate);
         }
     };
 
+    private final FluidTank FLUID_TANK = new FluidTank(10000) {
+        @Override
+        protected void onContentsChanged() {
+            setChanged();
+            if(!level.isClientSide()) {
+                ModMessages.sendToClients(new FluidSyncS2CPacket(this.fluid, worldPosition));
+            }
+        }
+
+        @Override
+        public boolean isFluidValid(FluidStack stack) {
+            return stack.getFluid() == ModFluids.SOURCE_OIL_WATER.get();
+        }
+    };
+
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
+    private LazyOptional<IFluidHandler> lazyFluidHandler = LazyOptional.empty();
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 200;
@@ -89,6 +113,14 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
         };
     }
 
+    public void setFluid(FluidStack stack) {
+        this.FLUID_TANK.setFluid(stack);
+    }
+
+    public FluidStack getFluidStack() {
+        return this.FLUID_TANK.getFluid();
+    }
+
     @Override
     public Component getDisplayName() {
         return Component.literal("Gem Burner");
@@ -97,6 +129,7 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+        ModMessages.sendToClients(new FluidSyncS2CPacket(this.getFluidStack(), worldPosition));
         return new GemBurnerMenu(id, inventory, this, this.data);
     }
 
@@ -104,27 +137,32 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
     public void onLoad() {
         super.onLoad();
         lazyItemHandler = LazyOptional.of(() -> itemHandler);
+        lazyFluidHandler = LazyOptional.of(() -> FLUID_TANK);
     }
 
     @Override
     public void invalidateCaps() {
         super.invalidateCaps();
         lazyItemHandler.invalidate();
+        lazyFluidHandler.invalidate();
     }
 
     @Override
     protected void saveAdditional(CompoundTag nbt) {
         nbt.put("inventory", itemHandler.serializeNBT());
         nbt.putInt("gem_burner.progress", this.progress);
-
+        nbt = FLUID_TANK.writeToNBT(nbt);
         super.saveAdditional(nbt);
     }
 
     @Nonnull
     @Override
     public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @javax.annotation.Nullable Direction side) {
-                if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
             return lazyItemHandler.cast();
+        }
+        if(cap == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
+            return lazyFluidHandler.cast();
         }
         return super.getCapability(cap, side);
     }
@@ -134,6 +172,7 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
         progress = nbt.getInt("gem_burner.progress");
+        FLUID_TANK.readFromNBT(nbt);
     }
 
     public void drops() {
@@ -159,6 +198,8 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
             pEntity.resetProgress();
             setChanged(level, pos, state);
         }
+        if (hasFluidItemInSourceSlot(pEntity))
+            transferItemFluidToFluidTank(pEntity);
     }
     
     private void resetProgress() {
@@ -177,6 +218,41 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
         }
          */
     }
+
+    private static void checkOilInsert(GemBurnerBlockEntity entity) {
+        /*
+        if (!entity.itemHandler.getStackInSlot(3).isEmpty())
+            entity.itemHandler.extractItem(3, 1, false);
+        int drainAmount = Math.min(entity.FLUID_TANK.getSpace(), 1000);
+        FluidStack stack = handler.drain(drainAmount, IFluidHandler.FluidAction.EXECUTE);
+        entity.FLUID_TANK.fill(stack, IFluidHandler.FluidAction.EXECUTE);
+         */
+
+    }
+
+    private static void transferItemFluidToFluidTank(GemBurnerBlockEntity pEntity) {
+        pEntity.itemHandler.getStackInSlot(3).getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY).ifPresent(handler -> {
+            int drainAmount = Math.min(pEntity.FLUID_TANK.getSpace(), 1000);
+
+            FluidStack stack = handler.drain(drainAmount, IFluidHandler.FluidAction.SIMULATE);
+            if(pEntity.FLUID_TANK.isFluidValid(stack)) {
+                stack = handler.drain(drainAmount, IFluidHandler.FluidAction.EXECUTE);
+                fillTankWithFluid(pEntity, stack, handler.getContainer());
+            }
+        });
+    }
+
+    private static void fillTankWithFluid(GemBurnerBlockEntity pEntity, FluidStack stack, ItemStack container) {
+        pEntity.FLUID_TANK.fill(stack, IFluidHandler.FluidAction.EXECUTE);
+
+        pEntity.itemHandler.extractItem(3, 1, false);
+        pEntity.itemHandler.insertItem(3, container, false);
+    }
+
+    private static boolean hasFluidItemInSourceSlot(GemBurnerBlockEntity pEntity) {
+        return pEntity.itemHandler.getStackInSlot(3).getCount() > 0;
+    }
+
 
     private static boolean hasRecipe(GemBurnerBlockEntity entity) {
         /*

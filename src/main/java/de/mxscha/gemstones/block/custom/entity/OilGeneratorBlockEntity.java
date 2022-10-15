@@ -59,6 +59,10 @@ public class OilGeneratorBlockEntity extends BlockEntity implements MenuProvider
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 200;
+    private static final int INPUT_SLOT = 0;
+    private static final int FUEL_SLOT = 1;
+    private static final int RESULT_SLOT = 2;
+
 
     public OilGeneratorBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.OIL_GENERATOR.get(), pos, state);
@@ -114,14 +118,13 @@ public class OilGeneratorBlockEntity extends BlockEntity implements MenuProvider
     protected void saveAdditional(CompoundTag nbt) {
         nbt.put("inventory", itemHandler.serializeNBT());
         nbt.putInt("oil_generator.progress", this.progress);
-
         super.saveAdditional(nbt);
     }
 
     @Nonnull
     @Override
     public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @javax.annotation.Nullable Direction side) {
-                if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
             return lazyItemHandler.cast();
         }
         return super.getCapability(cap, side);
@@ -168,9 +171,9 @@ public class OilGeneratorBlockEntity extends BlockEntity implements MenuProvider
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         Optional<OilGeneratorRecipe> match = level.getRecipeManager().getRecipeFor(OilGeneratorRecipe.Type.INSTANCE, inventory, level);
         if (hasRecipe(entity)) {
-            entity.itemHandler.extractItem(0, 1, false);
-            entity.itemHandler.extractItem(1, 1, false);
-            entity.itemHandler.setStackInSlot(2, new ItemStack(ModItems.OIL_BUCKET.get()));
+            entity.itemHandler.extractItem(INPUT_SLOT, 1, false);
+            entity.itemHandler.extractItem(FUEL_SLOT, 1, false);
+            entity.itemHandler.setStackInSlot(RESULT_SLOT, new ItemStack(ModItems.OIL_BUCKET.get()));
         }
     }
 
@@ -180,11 +183,8 @@ public class OilGeneratorBlockEntity extends BlockEntity implements MenuProvider
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
-
         Optional<OilGeneratorRecipe> match = level.getRecipeManager().getRecipeFor(OilGeneratorRecipe.Type.INSTANCE, inventory, level);
-
-        return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
-                && canInsertItemIntoOutputSlot(inventory, match.get().getResultItem()) && hasFuel(inventory);
+        return match.isPresent() && canInsertAmountIntoOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, match.get().getResultItem()) && hasFuel(inventory);
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack stack) {

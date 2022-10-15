@@ -10,6 +10,7 @@ import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
@@ -18,6 +19,11 @@ public class GemBurnerMenu extends AbstractContainerMenu {
     public final GemBurnerBlockEntity entity;
     private final Level level;
     private final ContainerData data;
+    private static final int INPUT_SLOT = 0;
+    private static final int OIL_SLOT = 3;
+    private static final int FUEL_SLOT = 1;
+    private static final int RESULT_SLOT = 2;
+    private FluidStack fluidStack;
 
     public GemBurnerMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
         this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
@@ -25,24 +31,38 @@ public class GemBurnerMenu extends AbstractContainerMenu {
 
     public GemBurnerMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.GEM_BURNER_MENU.get(), id);
-        checkContainerSize(inv, 3);
+        checkContainerSize(inv, 4);
         this.entity = (GemBurnerBlockEntity) entity;
         this.level = inv.player.level;
         this.data = data;
+        this.fluidStack = ((GemBurnerBlockEntity) entity).getFluidStack();
 
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
         this.entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 66, 17));
-            this.addSlot(new SlotItemHandler(handler, 1, 93, 17));
-            this.addSlot(new ModResultSlot(handler, 2, 80, 53));
+            this.addSlot(new SlotItemHandler(handler, INPUT_SLOT, 69, 17));
+            this.addSlot(new SlotItemHandler(handler, FUEL_SLOT, 69, 53));
+            this.addSlot(new SlotItemHandler(handler, OIL_SLOT, 34, 53));
+            this.addSlot(new ModResultSlot(handler, RESULT_SLOT, 129, 35));
         });
         addDataSlots(data);
     }
 
     public boolean isCrafting() {
         return data.get(0) > 0;
+    }
+
+    public void setFluid(FluidStack fluidStack) {
+        this.fluidStack = fluidStack;
+    }
+
+    public FluidStack getFluidStack() {
+        return fluidStack;
+    }
+
+    public GemBurnerBlockEntity getBlockEntity() {
+        return this.entity;
     }
 
     public int getScaledProgress() {
@@ -68,7 +88,7 @@ public class GemBurnerMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 3;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 4;  // must be the number of slots you have!
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {

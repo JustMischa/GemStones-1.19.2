@@ -153,6 +153,9 @@
   "block.gemstones.oil_infused_stone": "Oil Infused Stone",
   "block.gemstones.oil_generator": "Oil Generator",
   "block.gemstones.gem_burner": "Gem Burner",
+  "fluid_type.gemstones.oil_fluid": "Oil",
+  "gemstones.tooltip.liquid.amount.with.capacity": "%s / %s mL",
+  "gemstones.tooltip.liquid.amount": "%s mL",
   "itemGroup.block_gemstones": "GemStones Blocks",
   "itemGroup.item_gemstones": "GemStones Items",
   "itemGroup.armory_gemstones": "GemStones Items"

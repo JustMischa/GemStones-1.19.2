@@ -16,7 +16,7 @@ public class ModMenuTypes {
             DeferredRegister.create(ForgeRegistries.MENU_TYPES, GemStones.MOD_ID);
 
     public static final RegistryObject<MenuType<OilGeneratorMenu>> OIL_GENERATOR_MENU = registerMenuType(OilGeneratorMenu::new, "oil_generator_menu");
-    public static final RegistryObject<MenuType<OilGeneratorMenu>> GEM_BURNER_MENU = registerMenuType(OilGeneratorMenu::new, "gem_burner_menu");
+    public static final RegistryObject<MenuType<GemBurnerMenu>> GEM_BURNER_MENU = registerMenuType(GemBurnerMenu::new, "gem_burner_menu");
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));

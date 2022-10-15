@@ -17,7 +17,7 @@ public class ModFluidsTypes {
 
     public static final DeferredRegister<FluidType> FLUID_TYPES = DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, GemStones.MOD_ID);
 
-    public static final RegistryObject<FluidType> OIL_FLUID_TYPE = register("oil_fluid", FluidType.Properties.create().lightLevel(2).density(15).viscosity(5), 0xA1E038D0, 224f, 56f, 208f);
+    public static final RegistryObject<FluidType> OIL_FLUID_TYPE = register("oil_fluid", FluidType.Properties.create().lightLevel(0).density(15).viscosity(0).canDrown(true).viscosity(100), 0xB0000000, 0f, 0f, 0f);
 
     private static RegistryObject<FluidType> register(String name, FluidType.Properties properties, int color, float red, float blue, float green) {
         return FLUID_TYPES.register(name, () -> new BaseFluidType(WATER_STILL_RL, WATER_FLOWING_RL, OIL_OVERLAY_RL, color, new Vector3f(red / 255f, blue / 255f, green / 255f), properties));

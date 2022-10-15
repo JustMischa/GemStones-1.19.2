@@ -3,23 +3,48 @@ package de.mxscha.gemstones.utils.screen;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import de.mxscha.gemstones.GemStones;
+import de.mxscha.gemstones.utils.mouse.MouseUtil;
+import de.mxscha.gemstones.utils.screen.renderer.FluidTankRenderer;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.item.TooltipFlag;
 
-public class GemBurnerScreen extends AbstractContainerScreen<OilGeneratorMenu> {
+import java.util.Optional;
+
+public class GemBurnerScreen extends AbstractContainerScreen<GemBurnerMenu> {
 
     private static final ResourceLocation TEXTURE = new ResourceLocation(GemStones.MOD_ID,"textures/gui/gem_burner_gui.png");
+    private FluidTankRenderer renderer;
 
-    public GemBurnerScreen(OilGeneratorMenu menu, Inventory inventory, Component component) {
+    public GemBurnerScreen(GemBurnerMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component);
     }
 
     @Override
     protected void init() {
         super.init();
+        assignFluidRenderer();
+    }
+
+    private void assignFluidRenderer() {
+        renderer = new FluidTankRenderer(64000, true, 22, 52);
+    }
+
+    @Override
+    protected void renderLabels(PoseStack pPoseStack, int pMouseX, int pMouseY) {
+        int x = (width - imageWidth) / 2;
+        int y = (height - imageHeight) / 2;
+        renderFluidAreaTooltips(pPoseStack, pMouseX, pMouseY, x, y);
+    }
+
+    private void renderFluidAreaTooltips(PoseStack pPoseStack, int pMouseX, int pMouseY, int x, int y) {
+        if(isMouseAboveArea(pMouseX, pMouseY, x, y, 8, 17)) {
+            renderTooltip(pPoseStack, renderer.getTooltip(menu.getFluidStack(), TooltipFlag.Default.NORMAL),
+                    Optional.empty(), pMouseX - x, pMouseY - y);
+        }
     }
 
     @Override
@@ -32,6 +57,7 @@ public class GemBurnerScreen extends AbstractContainerScreen<OilGeneratorMenu> {
 
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
         renderProgressArrow(pPoseStack, x, y);
+        renderer.render(pPoseStack, x + 8, y + 17, menu.getFluidStack());
     }
 
     private void renderProgressArrow(PoseStack pPoseStack, int x, int y) {
@@ -45,5 +71,13 @@ public class GemBurnerScreen extends AbstractContainerScreen<OilGeneratorMenu> {
         renderBackground(pPoseStack);
         super.render(pPoseStack, mouseX, mouseY, delta);
         renderTooltip(pPoseStack, mouseX, mouseY);
+    }
+
+    private boolean isMouseAboveArea(int pMouseX, int pMouseY, int x, int y, int offsetX, int offsetY) {
+        return MouseUtil.isMouseOver(pMouseX, pMouseY, x + offsetX, y + offsetY, renderer.getWidth(), renderer.getHeight());
+    }
+
+    private boolean isMouseAboveArea(int pMouseX, int pMouseY, int x, int y, int offsetX, int offsetY, int width, int height) {
+        return MouseUtil.isMouseOver(pMouseX, pMouseY, x + offsetX, y + offsetY, width, height);
     }
 }
