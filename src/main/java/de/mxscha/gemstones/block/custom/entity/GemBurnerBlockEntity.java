@@ -3,6 +3,7 @@ package de.mxscha.gemstones.block.custom.entity;
 import de.mxscha.gemstones.utils.fluid.ModFluids;
 import de.mxscha.gemstones.utils.networking.ModMessages;
 import de.mxscha.gemstones.utils.networking.packet.FluidSyncS2CPacket;
+import de.mxscha.gemstones.utils.recipes.custom.GemBurnerRecipe;
 import de.mxscha.gemstones.utils.screen.GemBurnerMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -33,6 +34,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
+import java.util.Optional;
 
 public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
 
@@ -57,19 +59,18 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
                     return stack;
             }
             if (slot == 3) {
-                if(!isItemValid(slot, stack)) {
+                if (!isItemValid(slot, stack)) {
                     return stack;
                 }
             }
             return super.insertItem(slot, stack, simulate);
         }
     };
-
     private final FluidTank FLUID_TANK = new FluidTank(10000) {
         @Override
         protected void onContentsChanged() {
             setChanged();
-            if(!level.isClientSide()) {
+            if (!level.isClientSide()) {
                 ModMessages.sendToClients(new FluidSyncS2CPacket(this.fluid, worldPosition));
             }
         }
@@ -79,12 +80,15 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
             return stack.getFluid() == ModFluids.SOURCE_OIL_WATER.get();
         }
     };
-
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
     private LazyOptional<IFluidHandler> lazyFluidHandler = LazyOptional.empty();
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 200;
+    private int maxProgress = 60;
+    private static final int INPUT_SLOT = 0;
+    private static final int FUEL_SLOT = 1;
+    private static final int RESULT_SLOT = 2;
+    private static final int OIL_SLOT = 3;
 
     public GemBurnerBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.GEM_BURNER.get(), pos, state);
@@ -161,7 +165,7 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
         if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
             return lazyItemHandler.cast();
         }
-        if(cap == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
+        if (cap == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
             return lazyFluidHandler.cast();
         }
         return super.getCapability(cap, side);
@@ -185,13 +189,13 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     public static void tick(Level level, BlockPos pos, BlockState state, GemBurnerBlockEntity pEntity) {
-        if(level.isClientSide()) {
+        if (level.isClientSide()) {
             return;
         }
-        if(hasRecipe(pEntity)) {
+        if (hasRecipe(pEntity)) {
             pEntity.progress++;
             setChanged(level, pos, state);
-            if(pEntity.progress >= pEntity.maxProgress) {
+            if (pEntity.progress >= pEntity.maxProgress) {
                 craftItem(pEntity);
             }
         } else {
@@ -201,41 +205,17 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
         if (hasFluidItemInSourceSlot(pEntity))
             transferItemFluidToFluidTank(pEntity);
     }
-    
+
     private void resetProgress() {
         this.progress = 0;
     }
 
-    private static void craftItem(GemBurnerBlockEntity entity) {
-        /*
-        Level level = entity.level;
-        SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
-        Optional<OilGeneratorRecipe> match = level.getRecipeManager().getRecipeFor(OilGeneratorRecipe.Type.INSTANCE, inventory, level);
-        if (hasRecipe(entity)) {
-            entity.itemHandler.extractItem(0, 1, false);
-            entity.itemHandler.extractItem(1, 1, false);
-            entity.itemHandler.setStackInSlot(2, new ItemStack(ModItems.OIL_BUCKET.get()));
-        }
-         */
-    }
-
-    private static void checkOilInsert(GemBurnerBlockEntity entity) {
-        /*
-        if (!entity.itemHandler.getStackInSlot(3).isEmpty())
-            entity.itemHandler.extractItem(3, 1, false);
-        int drainAmount = Math.min(entity.FLUID_TANK.getSpace(), 1000);
-        FluidStack stack = handler.drain(drainAmount, IFluidHandler.FluidAction.EXECUTE);
-        entity.FLUID_TANK.fill(stack, IFluidHandler.FluidAction.EXECUTE);
-         */
-
-    }
-
     private static void transferItemFluidToFluidTank(GemBurnerBlockEntity pEntity) {
-        pEntity.itemHandler.getStackInSlot(3).getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY).ifPresent(handler -> {
+        pEntity.itemHandler.getStackInSlot(OIL_SLOT).getCapability(CapabilityFluidHandler.FLUID_HANDLER_ITEM_CAPABILITY).ifPresent(handler -> {
             int drainAmount = Math.min(pEntity.FLUID_TANK.getSpace(), 1000);
 
             FluidStack stack = handler.drain(drainAmount, IFluidHandler.FluidAction.SIMULATE);
-            if(pEntity.FLUID_TANK.isFluidValid(stack)) {
+            if (pEntity.FLUID_TANK.isFluidValid(stack)) {
                 stack = handler.drain(drainAmount, IFluidHandler.FluidAction.EXECUTE);
                 fillTankWithFluid(pEntity, stack, handler.getContainer());
             }
@@ -244,9 +224,8 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
 
     private static void fillTankWithFluid(GemBurnerBlockEntity pEntity, FluidStack stack, ItemStack container) {
         pEntity.FLUID_TANK.fill(stack, IFluidHandler.FluidAction.EXECUTE);
-
-        pEntity.itemHandler.extractItem(3, 1, false);
-        pEntity.itemHandler.insertItem(3, container, false);
+        pEntity.itemHandler.extractItem(OIL_SLOT, 1, false);
+        pEntity.itemHandler.insertItem(OIL_SLOT, container, false);
     }
 
     private static boolean hasFluidItemInSourceSlot(GemBurnerBlockEntity pEntity) {
@@ -254,35 +233,59 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
     }
 
 
+    private static void craftItem(GemBurnerBlockEntity pEntity) {
+        Level level = pEntity.level;
+        SimpleContainer inventory = new SimpleContainer(pEntity.itemHandler.getSlots());
+        for (int i = 0; i < pEntity.itemHandler.getSlots(); i++) {
+            inventory.setItem(i, pEntity.itemHandler.getStackInSlot(i));
+        }
+
+        Optional<GemBurnerRecipe> recipe = level.getRecipeManager()
+                .getRecipeFor(GemBurnerRecipe.Type.INSTANCE, inventory, level);
+
+        if (hasRecipe(pEntity)) {
+            pEntity.FLUID_TANK.drain(recipe.get().getFluid().getAmount(), IFluidHandler.FluidAction.EXECUTE);
+            pEntity.itemHandler.extractItem(INPUT_SLOT, 1, false);
+            pEntity.itemHandler.getStackInSlot(FUEL_SLOT).shrink(1);
+            pEntity.itemHandler.setStackInSlot(RESULT_SLOT, new ItemStack(recipe.get().getResultItem().getItem(),
+                    pEntity.itemHandler.getStackInSlot(RESULT_SLOT).getCount() + 1));
+            pEntity.resetProgress();
+        }
+    }
+
     private static boolean hasRecipe(GemBurnerBlockEntity entity) {
-        /*
-        SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         Level level = entity.level;
+        SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<OilGeneratorRecipe> match = level.getRecipeManager().getRecipeFor(OilGeneratorRecipe.Type.INSTANCE, inventory, level);
+        Optional<GemBurnerRecipe> recipe = level.getRecipeManager()
+                .getRecipeFor(GemBurnerRecipe.Type.INSTANCE, inventory, level);
 
-        return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
-                && canInsertItemIntoOutputSlot(inventory, match.get().getResultItem()) && hasFuel(inventory);
-         */
-        return false;
-    }
 
-    private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack stack) {
-        return inventory.getItem(2).getItem() == stack.getItem() || inventory.getItem(2).isEmpty();
+        return recipe.isPresent() && canInsertAmountIntoOutputSlot(inventory) &&
+                canInsertItemIntoOutputSlot(inventory, recipe.get().getResultItem()) && hasFuel(inventory)
+                && hasCorrectFluidInTank(entity, recipe) && hasCorrectFluidAmountInTank(entity, recipe);
     }
 
     private static boolean hasFuel(SimpleContainer inventory) {
-        return hasFuel(inventory, new ItemStack(Items.COAL));
+        return inventory.getItem(FUEL_SLOT).is(Items.COAL);
     }
 
-    private static boolean hasFuel(SimpleContainer inventory, ItemStack stack) {
-        return inventory.getItem(1).getItem() == stack.getItem();
+    private static boolean hasCorrectFluidAmountInTank(GemBurnerBlockEntity entity, Optional<GemBurnerRecipe> recipe) {
+        return entity.FLUID_TANK.getFluidAmount() >= recipe.get().getFluid().getAmount();
+    }
+
+    private static boolean hasCorrectFluidInTank(GemBurnerBlockEntity entity, Optional<GemBurnerRecipe> recipe) {
+        return recipe.get().getFluid().equals(entity.FLUID_TANK.getFluid());
+    }
+
+    private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack stack) {
+        return inventory.getItem(RESULT_SLOT).getItem() == stack.getItem() || inventory.getItem(RESULT_SLOT).isEmpty();
     }
 
     private static boolean canInsertAmountIntoOutputSlot(SimpleContainer inventory) {
-        return inventory.getItem(2).getCount() < 1;
+        return inventory.getItem(RESULT_SLOT).getMaxStackSize() > inventory.getItem(RESULT_SLOT).getCount();
     }
 }

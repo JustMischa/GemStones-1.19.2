@@ -18,7 +18,7 @@ public class ModItemCreativeTab {
     public static final CreativeModeTab BLOCK_GEMSTONES = new CreativeModeTab("block_gemstones") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModBlocks.CITRINE_ORE.get());
+            return new ItemStack(ModBlocks.JADE_ORE.get());
         }
     };
 

@@ -3,6 +3,7 @@ package de.mxscha.gemstones.utils.screen;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import de.mxscha.gemstones.GemStones;
+import de.mxscha.gemstones.block.custom.entity.GemBurnerBlockEntity;
 import de.mxscha.gemstones.utils.mouse.MouseUtil;
 import de.mxscha.gemstones.utils.screen.renderer.FluidTankRenderer;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -62,15 +63,16 @@ public class GemBurnerScreen extends AbstractContainerScreen<GemBurnerMenu> {
 
     private void renderProgressArrow(PoseStack pPoseStack, int x, int y) {
         if(menu.isCrafting()) {
-            blit(pPoseStack, x + 81, y + 37, 176, 0, 14, menu.getScaledProgress());
+            blit(pPoseStack, x + 92, y + 34, 176, 14, menu.getScaledProgress(), 17);
+            blit(pPoseStack, x + 70, y + 36, 176, 0, 14, 14);
         }
     }
 
     @Override
-    public void render(PoseStack pPoseStack, int mouseX, int mouseY, float delta) {
-        renderBackground(pPoseStack);
-        super.render(pPoseStack, mouseX, mouseY, delta);
-        renderTooltip(pPoseStack, mouseX, mouseY);
+    public void render(PoseStack stack, int mouseX, int mouseY, float delta) {
+        renderBackground(stack);
+        super.render(stack, mouseX, mouseY, delta);
+        renderTooltip(stack, mouseX, mouseY);
     }
 
     private boolean isMouseAboveArea(int pMouseX, int pMouseY, int x, int y, int offsetX, int offsetY) {
