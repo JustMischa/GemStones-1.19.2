@@ -54,6 +54,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> OIL_GENERATOR = registerBlock("oil_generator", () -> new OilGeneratorBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().noOcclusion()), ModItemCreativeTab.BLOCK_GEMSTONES);
     public static final RegistryObject<Block> GEM_BURNER = registerBlock("gem_burner", () -> new GemBurnerBlock(BlockBehaviour.Properties.copy(Blocks.STONE).requiresCorrectToolForDrops().noOcclusion()), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> BASIC_MACHINE_FRAME = registerBlock("basic_machine_frame", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).requiresCorrectToolForDrops()), ModItemCreativeTab.BLOCK_GEMSTONES);
+    public static final RegistryObject<Block> DIAMOND_MACHINE_FRAME = registerBlock("diamond_machine_frame", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).requiresCorrectToolForDrops()), ModItemCreativeTab.BLOCK_GEMSTONES);
 
     public static final RegistryObject<LiquidBlock> OIL_WATER_BLOCK = BLOCKS.register("oil_water_block", () -> new LiquidBlock(ModFluids.SOURCE_OIL_WATER, BlockBehaviour.Properties.of(Material.WATER)));
 

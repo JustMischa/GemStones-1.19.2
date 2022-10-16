@@ -38,6 +38,9 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.ENDER_BLOCK.get());
         this.dropSelf(ModBlocks.OIL_GENERATOR.get());
         this.dropSelf(ModBlocks.OIL_WATER_BLOCK.get());
+        this.dropSelf(ModBlocks.GEM_BURNER.get());
+        this.dropSelf(ModBlocks.BASIC_MACHINE_FRAME.get());
+        this.dropSelf(ModBlocks.DIAMOND_MACHINE_FRAME.get());
         // for leaves
         // this.add(ModBlocks.EXAMPLE_BLOCK.get(), (block) -> createLeavesDrops(block, ModBlocks.EXAMPLE_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }

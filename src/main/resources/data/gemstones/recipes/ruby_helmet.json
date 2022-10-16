@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "T": {
+      "item": "gemstones:ruby_gem"
+    }
+  },
+  "pattern": [
+    "TTT",
+    "T T"
+  ],
+  "result": {
+    "item": "gemstones:ruby_helmet"
+  }
+}

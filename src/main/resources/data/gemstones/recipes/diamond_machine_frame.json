@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "gemstones:basic_machine_frame"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "E": {
+      "item": "gemstones:energetic_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "EDE",
+    "RBR",
+    "EDE"
+  ],
+  "result": {
+    "item": "gemstones:diamond_machine_frame"
+  }
+}

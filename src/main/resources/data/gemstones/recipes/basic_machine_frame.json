@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "E": {
+      "item": "gemstones:energetic_ingot"
+    },
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "T": {
+      "item": "gemstones:tin_ingot"
+    }
+  },
+  "pattern": [
+    "ETE",
+    "CIC",
+    "ETE"
+  ],
+  "result": {
+    "item": "gemstones:basic_machine_frame"
+  }
+}

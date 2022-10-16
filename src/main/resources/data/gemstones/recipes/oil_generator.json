@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "gemstones:basic_machine_frame"
+    },
+    "E": {
+      "item": "gemstones:energetic_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    },
+    "T": {
+      "item": "gemstones:tin_ingot"
+    }
+  },
+  "pattern": [
+    "TRT",
+    "EBE",
+    "TRT"
+  ],
+  "result": {
+    "item": "gemstones:oil_generator"
+  }
+}

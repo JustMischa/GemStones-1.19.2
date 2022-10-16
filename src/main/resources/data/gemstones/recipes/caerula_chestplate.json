@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "T": {
+      "item": "gemstones:caerula_ingot"
+    }
+  },
+  "pattern": [
+    "T T",
+    "TTT",
+    "TTT"
+  ],
+  "result": {
+    "item": "gemstones:caerula_chestplate"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "T": {
+      "item": "gemstones:citrine_gem"
+    }
+  },
+  "pattern": [
+    "T T",
+    "TTT",
+    "TTT"
+  ],
+  "result": {
+    "item": "gemstones:citrine_chestplate"
+  }
+}

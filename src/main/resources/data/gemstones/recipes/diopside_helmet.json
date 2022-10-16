@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "T": {
+      "item": "gemstones:diopside_gem"
+    }
+  },
+  "pattern": [
+    "TTT",
+    "T T"
+  ],
+  "result": {
+    "item": "gemstones:diopside_helmet"
+  }
+}

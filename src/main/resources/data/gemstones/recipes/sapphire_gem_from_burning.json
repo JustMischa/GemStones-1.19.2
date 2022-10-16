@@ -1,0 +1,16 @@
+{
+  "type": "gemstones:burning",
+  "ingredients": [
+    {
+      "item": "gemstones:sapphire_ore"
+    }
+  ],
+  "fluid": {
+    "FluidName": "gemstones:oil_water_fluid",
+    "Amount": 50
+  },
+  "output": {
+    "item": "gemstones:sapphire_gem",
+    "count": 2
+  }
+}

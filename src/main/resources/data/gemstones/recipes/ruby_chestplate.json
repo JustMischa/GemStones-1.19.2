@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "T": {
+      "item": "gemstones:ruby_gem"
+    }
+  },
+  "pattern": [
+    "T T",
+    "TTT",
+    "TTT"
+  ],
+  "result": {
+    "item": "gemstones:ruby_chestplate"
+  }
+}

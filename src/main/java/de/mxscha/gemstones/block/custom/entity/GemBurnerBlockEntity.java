@@ -248,7 +248,7 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
             pEntity.itemHandler.extractItem(INPUT_SLOT, 1, false);
             pEntity.itemHandler.getStackInSlot(FUEL_SLOT).shrink(1);
             pEntity.itemHandler.setStackInSlot(RESULT_SLOT, new ItemStack(recipe.get().getResultItem().getItem(),
-                    pEntity.itemHandler.getStackInSlot(RESULT_SLOT).getCount() + 1));
+                    pEntity.itemHandler.getStackInSlot(RESULT_SLOT).getCount() + recipe.get().getResultItem().getCount()));
             pEntity.resetProgress();
         }
     }
@@ -270,7 +270,7 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     private static boolean hasFuel(SimpleContainer inventory) {
-        return inventory.getItem(FUEL_SLOT).is(Items.COAL);
+        return inventory.getItem(FUEL_SLOT).is(Items.COAL) || inventory.getItem(FUEL_SLOT).is(Items.CHARCOAL);
     }
 
     private static boolean hasCorrectFluidAmountInTank(GemBurnerBlockEntity entity, Optional<GemBurnerRecipe> recipe) {
