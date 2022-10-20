@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gemstones:tin_sword"
+    },
+    {
+      "item": "gemstones:tin_pickaxe"
+    },
+    {
+      "item": "gemstones:tin_axe"
+    },
+    {
+      "item": "gemstones:tin_shovel"
+    },
+    {
+      "item": "gemstones:tin_hoe"
+    }
+  ],
+  "result": {
+    "item": "gemstones:tin_paxel"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gemstones:ruby_sword"
+    },
+    {
+      "item": "gemstones:ruby_pickaxe"
+    },
+    {
+      "item": "gemstones:ruby_axe"
+    },
+    {
+      "item": "gemstones:ruby_shovel"
+    },
+    {
+      "item": "gemstones:ruby_hoe"
+    }
+  ],
+  "result": {
+    "item": "gemstones:ruby_paxel"
+  }
+}

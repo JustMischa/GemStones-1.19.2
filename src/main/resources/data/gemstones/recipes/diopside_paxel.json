@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gemstones:diopside_sword"
+    },
+    {
+      "item": "gemstones:diopside_pickaxe"
+    },
+    {
+      "item": "gemstones:diopside_axe"
+    },
+    {
+      "item": "gemstones:diopside_shovel"
+    },
+    {
+      "item": "gemstones:diopside_hoe"
+    }
+  ],
+  "result": {
+    "item": "gemstones:diopside_paxel"
+  }
+}

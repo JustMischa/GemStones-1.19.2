@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gemstones:sapphire_sword"
+    },
+    {
+      "item": "gemstones:sapphire_pickaxe"
+    },
+    {
+      "item": "gemstones:sapphire_axe"
+    },
+    {
+      "item": "gemstones:sapphire_shovel"
+    },
+    {
+      "item": "gemstones:sapphire_hoe"
+    }
+  ],
+  "result": {
+    "item": "gemstones:sapphire_paxel"
+  }
+}

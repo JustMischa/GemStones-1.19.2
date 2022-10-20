@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gemstones:citrine_sword"
+    },
+    {
+      "item": "gemstones:citrine_pickaxe"
+    },
+    {
+      "item": "gemstones:citrine_axe"
+    },
+    {
+      "item": "gemstones:citrine_shovel"
+    },
+    {
+      "item": "gemstones:citrine_hoe"
+    }
+  ],
+  "result": {
+    "item": "gemstones:citrine_paxel"
+  }
+}

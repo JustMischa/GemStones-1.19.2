@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gemstones:jade_sword"
+    },
+    {
+      "item": "gemstones:jade_pickaxe"
+    },
+    {
+      "item": "gemstones:jade_axe"
+    },
+    {
+      "item": "gemstones:jade_shovel"
+    },
+    {
+      "item": "gemstones:jade_hoe"
+    }
+  ],
+  "result": {
+    "item": "gemstones:jade_paxel"
+  }
+}

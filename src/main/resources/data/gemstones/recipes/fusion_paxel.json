@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gemstones:fusion_sword"
+    },
+    {
+      "item": "gemstones:fusion_pickaxe"
+    },
+    {
+      "item": "gemstones:fusion_axe"
+    },
+    {
+      "item": "gemstones:fusion_shovel"
+    },
+    {
+      "item": "gemstones:fusion_hoe"
+    }
+  ],
+  "result": {
+    "item": "gemstones:fusion_paxel"
+  }
+}

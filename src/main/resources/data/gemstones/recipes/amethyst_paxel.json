@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gemstones:amethyst_sword"
+    },
+    {
+      "item": "gemstones:amethyst_pickaxe"
+    },
+    {
+      "item": "gemstones:amethyst_axe"
+    },
+    {
+      "item": "gemstones:amethyst_shovel"
+    },
+    {
+      "item": "gemstones:amethyst_hoe"
+    }
+  ],
+  "result": {
+    "item": "gemstones:amethyst_paxel"
+  }
+}

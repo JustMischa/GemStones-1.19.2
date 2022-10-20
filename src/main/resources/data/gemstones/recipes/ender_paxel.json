@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gemstones:ender_sword"
+    },
+    {
+      "item": "gemstones:ender_pickaxe"
+    },
+    {
+      "item": "gemstones:ender_axe"
+    },
+    {
+      "item": "gemstones:ender_shovel"
+    },
+    {
+      "item": "gemstones:ender_hoe"
+    }
+  ],
+  "result": {
+    "item": "gemstones:ender_paxel"
+  }
+}

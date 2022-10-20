@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "gemstones:caerula_sword"
+    },
+    {
+      "item": "gemstones:caerula_pickaxe"
+    },
+    {
+      "item": "gemstones:caerula_axe"
+    },
+    {
+      "item": "gemstones:caerula_shovel"
+    },
+    {
+      "item": "gemstones:caerula_hoe"
+    }
+  ],
+  "result": {
+    "item": "gemstones:caerula_paxel"
+  }
+}
