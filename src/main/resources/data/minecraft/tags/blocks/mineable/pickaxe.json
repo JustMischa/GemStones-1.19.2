@@ -23,6 +23,8 @@
     "gemstones:ender_block",
     "gemstones:oil_infused_stone",
     "gemstones:oil_generator",
-    "gemstones:gem_burner"
+    "gemstones:gem_burner",
+    "gemstones:basic_machine_frame",
+    "gemstones:diamond_machine_frame"
   ]
 }

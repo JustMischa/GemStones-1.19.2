@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gemstones:block/basic_machine_frame"
+    }
+  }
+}

@@ -9,6 +9,8 @@ import de.mxscha.gemstones.utils.fluid.ModFluidsTypes;
 import de.mxscha.gemstones.utils.networking.ModMessages;
 import de.mxscha.gemstones.utils.recipes.ModRecipes;
 import de.mxscha.gemstones.utils.screen.*;
+import de.mxscha.gemstones.world.feature.ModConfiguredFeatures;
+import de.mxscha.gemstones.world.feature.ModPlacedFeatures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.gui.screens.OutOfMemoryScreen;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -45,6 +47,8 @@ public class GemStones {
         ModRecipes.register(eventBus);
         ModFluidsTypes.register(eventBus);
         ModFluids.register(eventBus);
+        ModConfiguredFeatures.register(eventBus);
+        ModPlacedFeatures.register(eventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "gemstones:fusion_pickaxe"
+  },
+  "addition": {
+    "item": "gemstones:fusion_netherite_ingot"
+  },
+  "result": {
+    "item": "gemstones:fusion_netherite_pickaxe"
+  }
+}

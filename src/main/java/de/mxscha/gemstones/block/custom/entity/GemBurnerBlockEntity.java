@@ -259,10 +259,7 @@ public class GemBurnerBlockEntity extends BlockEntity implements MenuProvider {
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
-
-        Optional<GemBurnerRecipe> recipe = level.getRecipeManager()
-                .getRecipeFor(GemBurnerRecipe.Type.INSTANCE, inventory, level);
-
+        Optional<GemBurnerRecipe> recipe = level.getRecipeManager().getRecipeFor(GemBurnerRecipe.Type.INSTANCE, inventory, level);
 
         return recipe.isPresent() && canInsertAmountIntoOutputSlot(inventory) &&
                 canInsertItemIntoOutputSlot(inventory, recipe.get().getResultItem()) && hasFuel(inventory)

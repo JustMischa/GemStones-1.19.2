@@ -153,6 +153,8 @@
   "block.gemstones.oil_infused_stone": "Oil Infused Stone",
   "block.gemstones.oil_generator": "Oil Generator",
   "block.gemstones.gem_burner": "Gem Burner",
+  "block.gemstones.basic_machine_frame": "Basic Machine Frame",
+  "block.gemstones.diamond_machine_frame": "Diamond Machine Frame",
   "fluid_type.gemstones.oil_fluid": "Oil",
   "gemstones.tooltip.liquid.amount.with.capacity": "%s / %s mL",
   "gemstones.tooltip.liquid.amount": "%s mL",

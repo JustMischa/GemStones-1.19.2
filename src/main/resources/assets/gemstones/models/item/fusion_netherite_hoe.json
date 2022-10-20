@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "gemstones:item/caerula_hoe"
+    "layer0": "gemstones:item/fusion_netherite_hoe"
   }
 }
